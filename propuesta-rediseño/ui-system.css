@@ -1,0 +1,285 @@
+/* ITASO NNA · Capa de sistema visual
+   Esta hoja se carga al final. Unifica estructura, jerarquía y estados sin
+   borrar la composición particular de cada sección. */
+
+:where(.resources-intro,.games-intro,.missions-intro,.share-intro,.achievements-intro) {
+  width: 100%;
+  min-height: 306px;
+  padding: clamp(42px,4.8vw,70px) var(--page-gutter);
+}
+
+:where(.resources-intro-copy,.games-intro-copy,.missions-intro-copy,.share-intro-copy,.achievements-title) {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+:where(.resources-intro-copy,.games-intro-copy,.missions-intro-copy,.share-intro-copy,.achievements-title) h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: var(--type-page-title);
+  font-weight: 780;
+  line-height: var(--leading-display);
+  letter-spacing: -.055em;
+}
+
+:where(.resources-intro-copy,.games-intro-copy,.missions-intro-copy,.share-intro-copy,.achievements-title) > p:last-child {
+  max-width: 42rem;
+  margin-top: var(--space-5);
+  color: var(--text-secondary);
+  font-size: var(--type-lead);
+  font-weight: 560;
+  line-height: var(--leading-body);
+}
+
+:where(.resource-explorer,.game-picker,.mission-picker,.share-options,.rewards-shell,.achievements-list-shell) {
+  padding-right: var(--page-gutter);
+  padding-left: var(--page-gutter);
+}
+
+:where(.resource-heading,.game-heading,.mission-heading,.share-options-heading,.rewards-heading,.achievements-list-heading) {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-right: auto;
+  margin-bottom: var(--space-9);
+  margin-left: auto;
+}
+
+:where(.resource-heading,.game-heading,.mission-heading,.share-options-heading,.rewards-heading,.achievements-list-heading) h2 {
+  max-width: 13ch;
+  font-size: var(--type-section-title);
+  font-weight: 760;
+  line-height: var(--leading-display);
+  letter-spacing: -.05em;
+}
+
+:where(.resource-layout,.game-layout,.mission-layout,.share-layout,.achievement-list,.reward-groups) {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  gap: var(--space-5);
+}
+
+:where(.content-card,.achievement-card,.reward-card,.next-reward) {
+  border-radius: var(--radius-card);
+}
+
+.content-card-copy h3 {
+  font-size: var(--type-card-title);
+  line-height: var(--leading-tight);
+}
+
+.content-card-copy > p:not(.game-mechanic):not(.mission-action) {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+:where(.button,.content-card-cta,.mission-choice,.share-choice) {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button {
+  min-height: 52px;
+  padding-inline: var(--space-6);
+  border-radius: var(--radius-control);
+  font-size: var(--type-button);
+  line-height: 1.1;
+}
+
+:where(a,button,[tabindex]):focus-visible {
+  outline: 3px solid color-mix(in srgb,var(--blue) 48%,white);
+  outline-offset: 3px;
+}
+
+/* Cierre compartido para personalizador y ventanas modales. */
+.modal-close {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0;
+  line-height: 0;
+  transition: background-color var(--duration-fast) ease;
+}
+
+.modal-close::before { content: none; }
+
+.modal-close::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color var(--duration-fast) ease;
+}
+
+.modal-close img {
+  position: relative;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.modal-close:hover::after,
+.modal-close:focus-visible::after { background: #f2f4f7; }
+
+:where(.resource-dialog,.mission-dialog,.share-dialog) > .modal-close {
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  right: 20px;
+}
+
+/* En Misiones el cierre convive con la ilustración y la barra de progreso. */
+.mission-dialog > .mission-close.modal-close {
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+}
+
+.mission-dialog > .mission-close.modal-close img {
+  width: 34px;
+  height: 34px;
+}
+
+.mission-dialog > .mission-close.modal-close::after {
+  width: 34px;
+  height: 34px;
+}
+
+.customizer-header > .modal-close {
+  position: relative;
+  justify-self: end;
+}
+
+.content-card-cta:focus-visible {
+  outline-offset: 5px;
+}
+
+@media (max-width:1099px) {
+  :where(.resource-layout,.game-layout,.mission-layout,.share-layout,.achievement-list,.reward-groups) {
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width:679px) {
+  .modal-close {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .modal-close img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal-close::after {
+    width: 36px;
+    height: 36px;
+  }
+
+  :where(.resource-dialog,.mission-dialog,.share-dialog) > .modal-close {
+    top: 16px;
+    right: 16px;
+  }
+
+  .mission-dialog > .mission-close.modal-close {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .mission-dialog > .mission-close.modal-close img {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .mission-dialog > .mission-close.modal-close::after {
+    width: 32px;
+    height: 32px;
+  }
+
+  :where(.resources-intro,.games-intro,.missions-intro,.share-intro,.achievements-intro) {
+    min-height: 0;
+    padding: var(--space-8) var(--page-gutter) var(--space-9);
+  }
+
+  :where(.resources-intro-copy,.games-intro-copy,.missions-intro-copy,.share-intro-copy,.achievements-title) h1 {
+    font-size: var(--type-page-title);
+    line-height: .94;
+  }
+
+  :where(.resources-intro-copy,.games-intro-copy,.missions-intro-copy,.share-intro-copy,.achievements-title) > p:last-child {
+    margin-top: var(--space-4);
+    font-size: var(--type-lead);
+    line-height: 1.5;
+  }
+
+  :where(.resource-explorer,.game-picker,.mission-picker,.share-options,.rewards-shell,.achievements-list-shell) {
+    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+    border-radius: var(--radius-section) var(--radius-section) 0 0;
+  }
+
+  :where(.resource-heading,.game-heading,.mission-heading,.share-options-heading,.rewards-heading,.achievements-list-heading) {
+    margin-bottom: var(--space-7);
+  }
+
+  :where(.resource-heading,.game-heading,.mission-heading,.share-options-heading,.rewards-heading,.achievements-list-heading) h2 {
+    font-size: var(--type-section-title);
+    line-height: .98;
+  }
+
+  .content-card-copy h3 {
+    font-size: var(--type-card-title);
+  }
+
+  .content-card-copy > p:not(.game-mechanic):not(.mission-action) {
+    font-size: var(--type-body);
+    line-height: 1.5;
+  }
+
+  .button {
+    min-height: 54px;
+    padding-inline: var(--space-6);
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

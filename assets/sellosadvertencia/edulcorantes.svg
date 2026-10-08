@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.5 36.87">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 12.72px;
+        font-weight: 700;
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x="-5.25" y="-5.25" width="217.01" height="47.37"/>
+    <path d="M210.76-4.25v45.37H-4.25V-4.25h215.01ZM212.76-6.25H-6.25v49.37h219.01V-6.25h0Z"/>
+  </g>
+  <rect x="84.82" y="-84.82" width="36.87" height="206.5" transform="translate(121.69 -84.82) rotate(90)"/>
+  <text class="cls-2" transform="translate(14.32 16.03)"><tspan x="0" y="0">CONTIENE EDULCORANTES,</tspan><tspan x="-8.82" y="15.26">NO RECOMENDABLE EN NIÑOS</tspan></text>
+</svg>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guía UI — ITASO NNA</title>
+  <link rel="stylesheet" href="styles.css?v=20261008a">
+  <link rel="stylesheet" href="ui-system.css?v=20261008d">
+  <link rel="stylesheet" href="guia-ui.css?v=20261008a">
+</head>
+<body class="guide-page">
+  <main>
+    <header class="guide-hero">
+      <p class="eyebrow">SISTEMA VISUAL</p>
+      <h1>Guía UI de ITASO NNA</h1>
+      <p>La referencia compartida para mantener retícula, texto, color, espacio y estados coherentes en todo el sitio.</p>
+    </header>
+
+    <section class="guide-section" aria-labelledby="grid-title">
+      <div class="guide-heading"><p class="eyebrow">01 · ESTRUCTURA</p><h2 id="grid-title">Retícula responsive</h2></div>
+      <div class="grid-specs">
+        <article><strong>12</strong><span>columnas</span><p>Desktop · 1100 px o más</p></article>
+        <article><strong>8</strong><span>columnas</span><p>Tablet · 680 a 1099 px</p></article>
+        <article><strong>4</strong><span>columnas</span><p>Móvil · hasta 679 px</p></article>
+      </div>
+      <div class="grid-demo" aria-label="Demostración de la retícula"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="guide-section" aria-labelledby="type-title">
+      <div class="guide-heading"><p class="eyebrow">02 · JERARQUÍA</p><h2 id="type-title">Tipografía</h2></div>
+      <div class="type-specimen">
+        <div><span>Display</span><p class="type-display">Ideas claras</p></div>
+        <div><span>Título de página</span><p class="type-page-title">Recursos</p></div>
+        <div><span>Título de sección</span><p class="type-section-title">Algo para entender mejor</p></div>
+        <div><span>Título de tarjeta</span><p class="type-card-title">Azúcar en bebidas</p></div>
+        <div><span>Texto principal</span><p class="type-body">Explora información clara y cercana para entender mejor lo que forma parte de tu día.</p></div>
+        <div><span>Etiqueta</span><p class="type-label">PARA EXPLORAR</p></div>
+      </div>
+    </section>
+
+    <section class="guide-section" aria-labelledby="color-title">
+      <div class="guide-heading"><p class="eyebrow">03 · IDENTIDAD</p><h2 id="color-title">Color por sección</h2></div>
+      <div class="color-grid">
+        <div class="swatch orange"><b>Recursos</b><span>#F56A28</span></div>
+        <div class="swatch green"><b>Juegos</b><span>#00A53D</span></div>
+        <div class="swatch blue"><b>Misiones</b><span>#00B3F0</span></div>
+        <div class="swatch yellow"><b>Logros</b><span>#FFC600</span></div>
+        <div class="swatch red"><b>Comparte</b><span>#DC2839</span></div>
+      </div>
+    </section>
+
+    <section class="guide-section" aria-labelledby="states-title">
+      <div class="guide-heading"><p class="eyebrow">04 · INTERACCIÓN</p><h2 id="states-title">Botones y estados</h2></div>
+      <div class="state-grid">
+        <div><span>Default</span><button class="button button-primary">Continuar <b>→</b></button></div>
+        <div><span>Hover</span><button class="button button-primary state-hover">Continuar <b>→</b></button></div>
+        <div><span>Focus</span><button class="button button-primary state-focus">Continuar <b>→</b></button></div>
+        <div><span>Disabled</span><button class="button button-primary" disabled>Continuar <b>→</b></button></div>
+      </div>
+      <div class="text-action-demo"><a class="content-card-cta" href="#states-title">Explorar <span aria-hidden="true">→</span></a><p>Los CTA editoriales usan una línea del ancho exacto del texto.</p></div>
+    </section>
+  </main>
+</body>
+</html>

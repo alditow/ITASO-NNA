@@ -1,0 +1,30 @@
+PROYECTO:
+Sección NNA de ITASO.
+
+OBJETIVO:
+Crear una experiencia digital para niñas, niños y adolescentes donde puedan jugar, explorar y aprender sobre alimentación y hábitos.
+
+ROL DEL NNA:
+Aprende, participa y comparte.
+No toma las decisiones principales de la familia.
+
+USUARIO PRINCIPAL DE LA OTRA PLATAFORMA:
+Personas cuidadoras.
+
+ESTILO:
+juvenil, gráfico, colorido.
+
+SECCIONES:
+- Inicio
+- Juegos
+- Recursos
+- Misiones
+- Logros
+- Compartir
+- Mi personaje
+
+PRIMERA EXPERIENCIA:
+El usuario puede crear un personaje o entrar directamente.
+
+IMPORTANTE:
+Evitar estigma de peso, comida buena/mala, culpa o cuerpos correctos/incorrectos.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 766.92 247.58">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: PlusJakartaSans-Bold, 'Plus Jakarta Sans';
+        font-size: 50.59px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <path d="M766.92,71.01v41.49c0,39.21-31.79,71.01-71.01,71.01h-238.94l-57.39,57.39c-8.9,8.9-23.34,8.9-32.25,0l-57.39-57.39H71.01C31.79,183.51,0,151.71,0,112.5v-41.49C0,31.79,31.79,0,71.01,0h624.9c39.22,0,71.01,31.79,71.01,71.01Z"/>
+  <text class="cls-1" transform="translate(84.09 109.93)"><tspan x="0" y="0">Algo </tspan><tspan class="cls-2" x="123.68" y="0">t</tspan><tspan x="144.33" y="0">e espera más abajo</tspan></text>
+</svg>

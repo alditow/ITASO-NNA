@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="reset-on-reload.js?v=20261008a"></script>
+  <meta name="description" content="Tus puntos, recompensas y logros dentro de ITASO NNA.">
+  <title>Logros — ITASO NNA</title>
+  <link rel="stylesheet" href="styles.css?v=20261008n">
+  <link rel="stylesheet" href="logros.css?v=20261008h">
+  <link rel="stylesheet" href="ui-system.css?v=20261008d">
+  <link rel="stylesheet" href="section-tuning.css?v=20261008c">
+</head>
+<body class="achievements-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio"><img src="../assets/ITASOR.svg" alt="ITASO"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="recursos.html">Recursos</a>
+      <a class="nav-games" href="juegos.html">Juegos</a>
+      <a class="nav-missions" href="misiones.html">Misiones</a>
+      <a class="nav-achievements is-active" href="logros.html" aria-current="page">Logros</a>
+      <a class="nav-share" href="compartir.html">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="achievements-intro" aria-labelledby="achievements-title">
+      <div class="achievements-title achievement-reveal">
+        <p class="eyebrow eyebrow-yellow">LO QUE VAS DESCUBRIENDO</p>
+        <h1 id="achievements-title">Logros</h1>
+        <p>Tus puntos reconocen lo que exploras, juegas y compartes.</p>
+      </div>
+
+    </section>
+
+    <section class="achievements-list-shell" aria-labelledby="available-achievements-title">
+      <div class="achievements-list-heading achievement-reveal">
+        <p class="eyebrow eyebrow-yellow">TUS RECORRIDOS</p>
+        <h2 id="available-achievements-title">Logros disponibles</h2>
+        <p>Cada logro recuerda algo que exploraste. No califica lo que comes ni tus decisiones.</p>
+      </div>
+      <div class="achievement-list" id="achievement-list"></div>
+    </section>
+
+    <section class="rewards-shell" aria-labelledby="rewards-title">
+      <div class="rewards-heading achievement-reveal">
+        <p class="eyebrow eyebrow-yellow">TU COLECCIÓN</p>
+        <h2 id="rewards-title">Recompensas</h2>
+        <p>Descubre nuevas expresiones y personajes mientras recorres ITASO.</p>
+      </div>
+
+      <article class="next-reward achievement-reveal" aria-labelledby="next-reward-heading">
+        <div class="next-reward-copy">
+          <div class="reward-points"><span>TUS PUNTOS</span><strong id="points-total">0</strong></div>
+          <p>PRÓXIMA RECOMPENSA</p>
+          <h3 id="next-reward-heading">Nueva expresión</h3>
+          <span id="next-reward-copy">40 puntos para desbloquearla</span>
+          <div class="reward-progress" role="progressbar" aria-label="Progreso hacia la próxima recompensa" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0">
+            <i id="reward-progress-bar"></i>
+          </div>
+          <small id="reward-progress-label">0 de 40 puntos</small>
+        </div>
+        <div class="next-reward-visual"><img id="next-reward-image" src="../assets/recompensa-nueva-expresion.svg" alt="Vista previa de la próxima recompensa"></div>
+      </article>
+
+      <div class="reward-groups">
+        <section class="reward-group achievement-reveal" aria-labelledby="unlocked-title">
+          <div class="group-heading"><div><p class="eyebrow eyebrow-green">YA SON TUYAS</p><h3 id="unlocked-title">Desbloqueadas</h3></div></div>
+          <div class="reward-list" id="unlocked-rewards"></div>
+        </section>
+        <section class="reward-group achievement-reveal" aria-labelledby="locked-title">
+          <div class="group-heading"><div><p class="eyebrow eyebrow-blue">SIGUE EXPLORANDO</p><h3 id="locked-title">Por descubrir</h3></div></div>
+          <div class="reward-list" id="locked-rewards"></div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer site-footer-secondary">
+    <a class="footer-brand" href="index.html" aria-label="Volver al inicio de ITASO NNA">
+      <img src="../assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+  <script src="logros.js?v=20261005a"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-book" viewBox="0 0 48 48"><path d="M7 10c7-2 12 0 17 4v25c-5-4-10-6-17-4V10Zm34 0c-7-2-12 0-17 4v25c5-4 10-6 17-4V10Z"/></symbol>
+  <symbol id="icon-drop" viewBox="0 0 48 48"><path d="M24 5S12 19 12 29a12 12 0 0 0 24 0C36 19 24 5 24 5Z"/><path d="M29 31c-.8 2.2-2.4 3.6-5 4"/></symbol>
+  <symbol id="icon-apple" viewBox="0 0 48 48"><path d="M24 16c-7-6-16-1-16 10 0 10 7 17 13 13 2-1 4-1 6 0 6 4 13-3 13-13 0-11-9-16-16-10Z"/><path d="M24 15c0-5 3-8 8-9M24 13c-4-4-8-4-11-2"/></symbol>
+  <symbol id="icon-document" viewBox="0 0 48 48"><path d="M13 6h15l8 8v28H13V6Z"/><path d="M28 6v9h8M19 23h11M19 29h11M19 35h8"/></symbol>
+  <symbol id="icon-movement" viewBox="0 0 48 48"><circle cx="28" cy="8" r="4"/><path d="m22 16 8 4 6 7M24 18l-6 9-8 3M20 27l7 4-2 11M18 28l-5 12M28 20l-4 7"/></symbol>
+  <symbol id="icon-compare" viewBox="0 0 48 48"><path d="M9 13h30M9 24h30M9 35h30"/><circle cx="18" cy="13" r="4"/><circle cx="31" cy="24" r="4"/><circle cx="22" cy="35" r="4"/></symbol>
+  <symbol id="icon-memory" viewBox="0 0 48 48"><rect x="7" y="11" width="15" height="24" rx="3"/><rect x="26" y="13" width="15" height="24" rx="3"/><path d="m11 19 7 8M18 19l-7 8M30 21h7M33.5 17.5v7"/></symbol>
+  <symbol id="icon-search" viewBox="0 0 48 48"><circle cx="21" cy="21" r="12"/><path d="m30 30 11 11M17 21l3 3 6-7"/></symbol>
+  <symbol id="icon-puzzle" viewBox="0 0 48 48"><path d="M8 9h13v7a5 5 0 1 1 6 0V9h13v13h-7a5 5 0 1 0 0 6h7v12H27v-6a5 5 0 1 0-6 0v6H8V27h7a5 5 0 1 0 0-6H8V9Z"/></symbol>
+  <symbol id="icon-share" viewBox="0 0 48 48"><rect x="8" y="14" width="25" height="24" rx="5"/><path d="M22 25h18M33 17l8 8-8 8"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 48 48"><path d="m24 6 5.5 11 12.5 2-9 8.5 2 12.5-11-6-11 6 2-12.5L6 19l12.5-2L24 6Z"/></symbol>
+  <symbol id="icon-question" viewBox="0 0 48 48"><path d="M15 17a9 9 0 1 1 14 7c-4 3-5 5-5 9"/><circle cx="24" cy="40" r="1.5"/></symbol>
+  <symbol id="icon-eye" viewBox="0 0 48 48"><path d="M4 24s7-12 20-12 20 12 20 12-7 12-20 12S4 24 4 24Z"/><circle cx="24" cy="24" r="6"/></symbol>
+</svg>
