@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="reset-on-reload.js?v=20261008a"></script>
-  <meta name="description" content="Conoce ITASO: un espacio para descubrir, jugar, preguntar y compartir.">
-  <title>ITASO NNA — Propuesta de rediseño</title>
-  <link rel="stylesheet" href="styles.css?v=20261008m">
+  <meta name="description" content="ITASO NNA: un espacio para descubrir, jugar, preguntar y compartir.">
+  <title>ITASO NNA</title>
+  <link rel="stylesheet" href="styles.css?v=20261008n">
   <link rel="stylesheet" href="ui-system.css?v=20261008d">
+  <style id="route-loading-style">body{visibility:hidden}</style>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<template id="page-inicio" data-body-class="">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header" data-header>
     <a class="brand" href="#inicio" aria-label="ITASO NNA, volver al inicio">
@@ -20,11 +21,11 @@
       <span></span><span></span><span></span><span class="sr-only">Abrir menú</span>
     </button>
     <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
-      <a class="nav-resources" href="recursos.html">Recursos</a>
-      <a class="nav-games" href="juegos.html">Juegos</a>
-      <a class="nav-missions" href="misiones.html">Misiones</a>
-      <a class="nav-achievements" href="logros.html">Logros</a>
-      <a class="nav-share" href="compartir.html">Compartir</a>
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a>
+      <a class="nav-games" href="index.html?page=juegos">Juegos</a>
+      <a class="nav-missions" href="index.html?page=misiones">Misiones</a>
+      <a class="nav-achievements" href="index.html?page=logros">Logros</a>
+      <a class="nav-share" href="index.html?page=compartir">Compartir</a>
     </nav>
     <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
   </header>
@@ -37,7 +38,7 @@
         <p class="hero-lead">Explora cosas que forman parte de tu día y aprende a entenderlas mejor.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#por-que">Conócenos <span aria-hidden="true">→</span></a>
-          <a class="button button-ghost" href="recursos.html">Ir directo a explorar</a>
+          <a class="button button-ghost" href="index.html?page=recursos">Ir directo a explorar</a>
         </div>
       </div>
 
@@ -91,15 +92,15 @@
       <div class="path-list">
         <article class="path-card reveal">
           <img class="path-card-art" src="assets/recursostarjeta.svg" alt="Recursos: información para descubrir">
-          <a class="path-card-cta cta-discover" href="recursos.html"><span>Explorar</span><b aria-hidden="true">→</b></a>
+          <a class="path-card-cta cta-discover" href="index.html?page=recursos"><span>Explorar</span><b aria-hidden="true">→</b></a>
         </article>
         <article class="path-card reveal">
           <img class="path-card-art" src="assets/juegatarjeta.svg" alt="Juegos: aprende mientras comparas y recuerdas">
-          <a class="path-card-cta cta-play" href="juegos.html"><span>Jugar</span><b aria-hidden="true">→</b></a>
+          <a class="path-card-cta cta-play" href="index.html?page=juegos"><span>Jugar</span><b aria-hidden="true">→</b></a>
         </article>
         <article class="path-card reveal">
           <img class="path-card-art" src="assets/compartetarjeta.svg" alt="Compartir: cuéntalo y pregunta">
-          <a class="path-card-cta cta-share" href="compartir.html"><span>Compartir</span><b aria-hidden="true">→</b></a>
+          <a class="path-card-cta cta-share" href="index.html?page=compartir"><span>Compartir</span><b aria-hidden="true">→</b></a>
         </article>
       </div>
     </section>
@@ -235,9 +236,750 @@
   <div class="notice" role="status" aria-live="polite" hidden>
     El acceso al sitio de cuidadores se conectará aquí.
   </div>
+</template>
 
-  <script src="script.js?v=20261005f"></script>
-  <script src="figma-mobile-capture.js"></script>
-  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+<template id="page-recursos" data-body-class="resources-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">Abrir menú</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources is-active" href="index.html?page=recursos" aria-current="page">Recursos</a>
+      <a class="nav-games" href="index.html?page=juegos">Juegos</a>
+      <a class="nav-missions" href="index.html?page=misiones">Misiones</a>
+      <a class="nav-achievements" href="index.html?page=logros">Logros</a>
+      <a class="nav-share" href="index.html?page=compartir">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="resources-intro" aria-labelledby="resources-title">
+      <div class="resources-intro-copy resource-reveal">
+        <p class="eyebrow eyebrow-orange">PARA EXPLORAR</p>
+        <h1 id="resources-title">Recursos</h1>
+        <p>Descubre cosas que puedes encontrar en tu día.</p>
+      </div>
+    </section>
+
+    <section class="resource-explorer" aria-labelledby="explore-title">
+      <div class="resource-heading resource-reveal">
+        <p class="eyebrow eyebrow-orange">ELIGE</p>
+        <h2 id="explore-title">Algo para entender mejor</h2>
+      </div>
+
+      <div class="resource-layout">
+        <article class="resource-card content-card card-orange resource-feature resource-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="card-art-asset art-seals" src="assets/resource-icons/sellosicon.svg" alt=""></div>
+          <div class="content-card-body">
+            <span class="content-card-icon" aria-hidden="true"><img class="category-icon" src="assets/resource-icons/educacion.svg" alt=""></span>
+          <div class="resource-copy content-card-copy">
+            <h3>Sellos de advertencia</h3>
+            <p>Descubre qué significan.</p>
+            <button class="resource-button content-card-cta" type="button" data-resource="sellos">Explorar <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="resource-card content-card card-green resource-sugar resource-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="card-art-asset art-sugar" src="assets/resource-icons/azucaricon.svg" alt=""></div>
+          <div class="content-card-body">
+            <span class="content-card-icon" aria-hidden="true"><img class="category-icon" src="assets/resource-icons/hidratacion.svg" alt=""></span>
+          <div class="resource-copy content-card-copy">
+            <h3>Azúcar en bebidas</h3>
+            <p>Compara y mira las diferencias.</p>
+            <button class="resource-button content-card-cta" type="button" data-resource="bebidas">Comparar <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="resource-card content-card card-blue resource-groups resource-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="card-art-asset art-food" src="assets/resource-icons/pescado.png" alt=""></div>
+          <div class="content-card-body">
+            <span class="content-card-icon" aria-hidden="true"><img class="category-icon" src="assets/resource-icons/nutricion.svg" alt=""></span>
+          <div class="resource-copy content-card-copy">
+            <h3>Grupos de alimentos</h3>
+            <p>Conoce dónde pertenece cada uno.</p>
+            <button class="resource-button content-card-cta" type="button" data-resource="grupos">Descubrir <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="resource-card content-card card-yellow resource-package resource-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="card-art-asset art-package" src="assets/resource-icons/empaqueicon.svg" alt=""></div>
+          <div class="content-card-body">
+            <span class="content-card-icon" aria-hidden="true"><img class="category-icon" src="assets/resource-icons/educacion-amarillo.svg" alt=""></span>
+          <div class="resource-copy content-card-copy">
+            <h3>Empaques</h3>
+            <p>Encuentra las pistas del frente y etiqueta.</p>
+            <button class="resource-button content-card-cta" type="button" data-resource="empaque">Analiza <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="resource-card content-card card-red resource-movement resource-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="card-art-asset art-movement" src="assets/resource-icons/tomatecorriendo.svg" alt=""></div>
+          <div class="content-card-body">
+            <span class="content-card-icon" aria-hidden="true"><img class="category-icon" src="assets/resource-icons/actfisica.svg" alt=""></span>
+          <div class="resource-copy content-card-copy">
+            <h3>Moverte también cuenta</h3>
+            <p>Descubre otras formas de cuidar tu día.</p>
+            <button class="resource-button content-card-cta" type="button" data-resource="movimiento">Ver más <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer-secondary">
+    <a class="footer-brand" href="index.html" aria-label="Volver al inicio de ITASO NNA">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <section class="resource-modal" id="resource-modal" role="dialog" aria-modal="true" aria-labelledby="resource-modal-title" aria-describedby="resource-modal-description" hidden>
+    <div class="resource-dialog" data-modal-accent="orange">
+      <button class="resource-close modal-close" type="button" data-close-resource aria-label="Cerrar recurso"><img src="assets/boton-x.svg" alt=""></button>
+      <span class="resource-scroll-cue" aria-hidden="true"><span>↓</span></span>
+
+      <div class="resource-modal-layout">
+        <article class="resource-modal-content">
+          <p class="resource-modal-kicker" id="resource-modal-kicker">RECURSO</p>
+          <h2 id="resource-modal-title"></h2>
+          <p class="resource-modal-description" id="resource-modal-description"></p>
+
+          <div class="resource-learning-grid">
+            <aside class="resource-modal-highlight" aria-labelledby="resource-modal-fact-label">
+              <p class="resource-fact-label" id="resource-modal-fact-label">¿SABÍAS QUE?</p>
+              <div class="resource-key-visual" id="resource-key-visual"></div>
+              <p class="resource-fact-copy" id="resource-modal-fact"></p>
+            </aside>
+
+            <section class="resource-important" aria-labelledby="resource-important-title">
+              <h3 id="resource-important-title">LO IMPORTANTE</h3>
+              <div class="resource-information" id="resource-modal-information"></div>
+            </section>
+          </div>
+
+          <aside class="resource-remember">
+            <span>PARA RECORDAR</span>
+            <p id="resource-modal-remember"></p>
+          </aside>
+
+          <p class="resource-source">Fuente: <a id="resource-modal-source" href="#" target="_blank" rel="noreferrer"></a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+
+<template id="page-juegos" data-body-class="games-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">Abrir menú</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a>
+      <a class="nav-games is-active" href="index.html?page=juegos" aria-current="page">Juegos</a>
+      <a class="nav-missions" href="index.html?page=misiones">Misiones</a>
+      <a class="nav-achievements" href="index.html?page=logros">Logros</a>
+      <a class="nav-share" href="index.html?page=compartir">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="games-intro" aria-labelledby="games-title">
+      <div class="games-intro-copy game-reveal">
+        <p class="eyebrow eyebrow-green">PARA PROBAR</p>
+        <h1 id="games-title">Juegos</h1>
+        <p>Juega, prueba y descubre nuevas pistas.</p>
+      </div>
+    </section>
+
+    <section class="game-picker" aria-labelledby="pick-title">
+      <div class="game-heading game-reveal">
+        <p class="eyebrow eyebrow-green">ELIGE</p>
+        <h2 id="pick-title">Una forma de jugar</h2>
+      </div>
+
+      <div class="game-layout">
+        <article class="game-card content-card card-green game-feature game-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="game-art game-art-compare" src="assets/cocavsyakult.svg" alt=""></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="game-card-icon" src="assets/juegapieza.svg" alt=""></span>
+          <div class="game-copy content-card-copy">
+            <p class="game-mechanic">Compara</p>
+            <h3>¿Cuál tiene más?</h3>
+            <p>Compara dos productos y descubre la respuesta.</p>
+            <a class="game-button content-card-cta" href="index.html?page=cual-tiene-mas">Jugar <span aria-hidden="true">→</span></a>
+          </div>
+          </div>
+        </article>
+
+        <article class="game-card content-card card-blue game-memory game-reveal">
+          <div class="content-card-art" aria-hidden="true"><img class="game-art game-art-memory" src="assets/memoramapepsi.svg" alt=""></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="game-card-icon" src="assets/juegapieza-azul.svg" alt=""></span>
+          <div class="game-copy content-card-copy">
+            <p class="game-mechanic">Recuerda</p>
+            <h3>Memorama</h3>
+            <p>Encuentra las parejas y descubre qué esconden.</p>
+            <a class="game-button content-card-cta" href="index.html?page=memorama">Jugar <span aria-hidden="true">→</span></a>
+          </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer-secondary">
+    <a class="footer-brand" href="index.html" aria-label="Volver al inicio de ITASO NNA">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+
+<template id="page-misiones" data-body-class="missions-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">Abrir menú</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a>
+      <a class="nav-games" href="index.html?page=juegos">Juegos</a>
+      <a class="nav-missions is-active" href="index.html?page=misiones" aria-current="page">Misiones</a>
+      <a class="nav-achievements" href="index.html?page=logros">Logros</a>
+      <a class="nav-share" href="index.html?page=compartir">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="missions-intro" aria-labelledby="missions-title">
+      <div class="missions-intro-copy mission-reveal">
+        <p class="eyebrow eyebrow-blue">FUERA DE LA PANTALLA</p>
+        <h1 id="missions-title">Misiones</h1>
+        <p>Prueba algo nuevo fuera de la pantalla.</p>
+      </div>
+    </section>
+
+    <section class="mission-picker" aria-labelledby="pick-title">
+      <div class="mission-heading mission-reveal">
+        <p class="eyebrow eyebrow-blue">ELIGE</p>
+        <h2 id="pick-title">Una pequeña misión</h2>
+      </div>
+
+      <div class="mission-layout">
+        <article class="mission-card content-card card-orange mission-feature mission-reveal">
+          <div class="content-card-art"><img class="mission-visual mission-corner-art detective-visual" src="assets/naranja-detective-mision.svg" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="mission-card-icon" src="assets/educacion-mision.svg" alt=""></span>
+          <div class="mission-copy content-card-copy">
+            <p class="mission-action">Busca</p>
+            <h3>Detective de empaques</h3>
+            <p>Busca un producto en casa y encuentra sus sellos.</p>
+            <button class="mission-button content-card-cta" type="button" data-mission="empaques">Probar misión <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="mission-card content-card card-green mission-groups mission-reveal">
+          <div class="content-card-art"><img class="mission-visual mission-corner-art groups-visual" src="assets/recurso2.PNG" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="mission-card-icon" src="assets/nutricion-mision.svg" alt=""></span>
+          <div class="mission-copy content-card-copy">
+            <p class="mission-action">Observa</p>
+            <h3>Busca los grupos</h3>
+            <p>Observa una comida y encuentra alimentos diferentes.</p>
+            <button class="mission-button content-card-cta" type="button" data-mission="grupos">Probar misión <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="mission-card content-card card-blue mission-water mission-reveal">
+          <div class="content-card-art"><img class="mission-visual mission-corner-art water-visual" src="assets/bebidas/agua.svg" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="mission-card-icon" src="assets/hidratacion-mision.svg" alt=""></span>
+          <div class="mission-copy content-card-copy">
+            <p class="mission-action">Prepara</p>
+            <h3>Agua a la mano</h3>
+            <p>Encuentra una forma de tener agua cerca durante tu día.</p>
+            <button class="mission-button content-card-cta" type="button" data-mission="agua">Empezar misión <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="mission-card content-card card-red mission-look mission-reveal">
+          <div class="content-card-art"><img class="mission-visual mission-corner-art look-visual" src="assets/tomate-ejercicio-mision.svg" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="mission-card-icon" src="assets/actfisica-mision.svg" alt=""></span>
+          <div class="mission-copy content-card-copy">
+            <p class="mission-action">Muévete</p>
+            <h3>Mira a tu alrededor</h3>
+            <p>Encuentra una forma de moverte durante tu día.</p>
+            <button class="mission-button content-card-cta" type="button" data-mission="alrededor">Probar misión <span aria-hidden="true">→</span></button>
+          </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer-secondary">
+    <a class="footer-brand" href="index.html" aria-label="Volver al inicio de ITASO NNA">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <section class="mission-modal" id="mission-modal" role="dialog" aria-modal="true" aria-labelledby="mission-modal-title" hidden>
+    <div class="mission-dialog">
+      <div class="mission-dialog-visual" data-dialog-visual aria-hidden="true"></div>
+      <div class="mission-dialog-copy" data-mission-step>
+        <div class="mission-progress"><span id="mission-progress-label">PASO 1 DE 3</span><i aria-hidden="true"></i></div>
+        <div class="mission-stage" id="mission-stage" tabindex="-1"></div>
+      </div>
+      <div class="mission-complete-view" data-complete-view hidden>
+        <div>
+          <p class="eyebrow eyebrow-green">DESCUBRIMIENTO HECHO</p>
+          <h2>¡Misión completada!</h2>
+          <p id="mission-reaction"></p>
+          <div class="mission-finish-actions">
+            <a class="button button-primary mission-share-link" href="index.html?page=compartir" id="mission-share-link">Compartir mi misión</a>
+            <button class="mission-back" type="button" data-close-mission>Terminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+
+<template id="page-logros" data-body-class="achievements-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio"><img src="assets/ITASOR.svg" alt="ITASO"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a>
+      <a class="nav-games" href="index.html?page=juegos">Juegos</a>
+      <a class="nav-missions" href="index.html?page=misiones">Misiones</a>
+      <a class="nav-achievements is-active" href="index.html?page=logros" aria-current="page">Logros</a>
+      <a class="nav-share" href="index.html?page=compartir">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="achievements-intro" aria-labelledby="achievements-title">
+      <div class="achievements-title achievement-reveal">
+        <p class="eyebrow eyebrow-yellow">LO QUE VAS DESCUBRIENDO</p>
+        <h1 id="achievements-title">Logros</h1>
+        <p>Tus puntos reconocen lo que exploras, juegas y compartes.</p>
+      </div>
+
+    </section>
+
+    <section class="achievements-list-shell" aria-labelledby="available-achievements-title">
+      <div class="achievements-list-heading achievement-reveal">
+        <p class="eyebrow eyebrow-yellow">TUS RECORRIDOS</p>
+        <h2 id="available-achievements-title">Logros disponibles</h2>
+        <p>Cada logro recuerda algo que exploraste. No califica lo que comes ni tus decisiones.</p>
+      </div>
+      <div class="achievement-list" id="achievement-list"></div>
+    </section>
+
+    <section class="rewards-shell" aria-labelledby="rewards-title">
+      <div class="rewards-heading achievement-reveal">
+        <p class="eyebrow eyebrow-yellow">TU COLECCIÓN</p>
+        <h2 id="rewards-title">Recompensas</h2>
+        <p>Descubre nuevas expresiones y personajes mientras recorres ITASO.</p>
+      </div>
+
+      <article class="next-reward achievement-reveal" aria-labelledby="next-reward-heading">
+        <div class="next-reward-copy">
+          <div class="reward-points"><span>TUS PUNTOS</span><strong id="points-total">0</strong></div>
+          <p>PRÓXIMA RECOMPENSA</p>
+          <h3 id="next-reward-heading">Nueva expresión</h3>
+          <span id="next-reward-copy">40 puntos para desbloquearla</span>
+          <div class="reward-progress" role="progressbar" aria-label="Progreso hacia la próxima recompensa" aria-valuemin="0" aria-valuemax="40" aria-valuenow="0">
+            <i id="reward-progress-bar"></i>
+          </div>
+          <small id="reward-progress-label">0 de 40 puntos</small>
+        </div>
+        <div class="next-reward-visual"><img id="next-reward-image" src="assets/recompensa-nueva-expresion.svg" alt="Vista previa de la próxima recompensa"></div>
+      </article>
+
+      <div class="reward-groups">
+        <section class="reward-group achievement-reveal" aria-labelledby="unlocked-title">
+          <div class="group-heading"><div><p class="eyebrow eyebrow-green">YA SON TUYAS</p><h3 id="unlocked-title">Desbloqueadas</h3></div></div>
+          <div class="reward-list" id="unlocked-rewards"></div>
+        </section>
+        <section class="reward-group achievement-reveal" aria-labelledby="locked-title">
+          <div class="group-heading"><div><p class="eyebrow eyebrow-blue">SIGUE EXPLORANDO</p><h3 id="locked-title">Por descubrir</h3></div></div>
+          <div class="reward-list" id="locked-rewards"></div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer site-footer-secondary">
+    <a class="footer-brand" href="index.html" aria-label="Volver al inicio de ITASO NNA">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+
+<template id="page-compartir" data-body-class="share-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio"><img src="assets/ITASOR.svg" alt="ITASO"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a>
+      <a class="nav-games" href="index.html?page=juegos">Juegos</a>
+      <a class="nav-missions" href="index.html?page=misiones">Misiones</a>
+      <a class="nav-achievements" href="index.html?page=logros">Logros</a>
+      <a class="nav-share is-active" href="index.html?page=compartir" aria-current="page">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="contenido">
+    <section class="share-intro" aria-labelledby="share-title">
+      <div class="share-intro-copy share-reveal">
+        <p class="eyebrow eyebrow-red">PARA CONVERSAR</p>
+        <h1 id="share-title">Comparte</h1>
+        <p>Cuéntale a alguien lo que descubriste.</p>
+      </div>
+    </section>
+
+    <section class="share-options" aria-labelledby="options-title">
+      <div class="share-options-heading share-reveal">
+        <p class="eyebrow eyebrow-red">ELIGE</p>
+        <h2 id="options-title">¿Qué quieres compartir?</h2>
+      </div>
+
+      <div class="share-layout">
+        <article class="share-option content-card card-red share-discovery share-reveal">
+          <div class="content-card-art"><img class="option-art option-character discovery-art" src="assets/tomatedesc.svg" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="share-symbol" src="assets/comparte-card-red.svg?v=20261005f" alt=""></span>
+          <div class="option-copy content-card-copy">
+            <p>DESCUBRE</p>
+            <h3>Un descubrimiento</h3>
+            <span>Comparte algo nuevo que encontraste en ITASO.</span>
+            <button class="share-button content-card-cta" type="button" data-share="discovery">Compartir <b aria-hidden="true">→</b></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="share-option content-card card-yellow share-achievements share-reveal">
+          <div class="content-card-art"><img class="option-art option-character achievements-art" src="assets/logros-compartir.svg" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="share-symbol" src="assets/comparte-card-yellow.svg?v=20261005f" alt=""></span>
+          <div class="option-copy content-card-copy">
+            <p>RECONOCE</p>
+            <h3>Mis logros</h3>
+            <span>Enséñale a alguien lo que has conseguido.</span>
+            <button class="share-button content-card-cta" type="button" data-share="achievements">Mostrar mis logros <b aria-hidden="true">→</b></button>
+          </div>
+          </div>
+        </article>
+
+        <article class="share-option content-card card-blue share-question share-reveal">
+          <div class="content-card-art"><img class="option-art option-character question-art" src="assets/berenjena-pensativa-compartir.svg" alt="" aria-hidden="true"></div>
+          <div class="content-card-body">
+          <span class="content-card-icon" aria-hidden="true"><img class="share-symbol" src="assets/comparte-card-blue.svg?v=20261005f" alt=""></span>
+          <div class="option-copy content-card-copy">
+            <p>PREGUNTA</p>
+            <h3>Una pregunta</h3>
+            <span>Una pregunta para platicarla con quien te cuida.</span>
+            <button class="share-button content-card-cta" type="button" data-share="question">Crear pregunta <b aria-hidden="true">→</b></button>
+          </div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="privacy-note share-reveal">
+        <strong>Esto se queda contigo.</strong>
+        <p>ITASO prepara una tarjeta para mostrar en persona. Nada se publica ni se envía automáticamente.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer-secondary">
+    <a class="footer-brand" href="index.html" aria-label="Volver al inicio de ITASO NNA">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <section class="share-modal" id="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-modal-title" hidden>
+    <div class="share-dialog">
+
+      <div class="share-compose" data-compose-step>
+        <div class="compose-visual" aria-hidden="true"><img id="share-compose-art" src="assets/tomatedesc.svg" alt=""></div>
+        <div class="compose-copy">
+          <p class="eyebrow eyebrow-red" id="share-modal-kicker">COMPARTE</p>
+          <h2 id="share-modal-title"></h2>
+          <p id="share-modal-description"></p>
+
+          <div class="discovery-choices" data-discovery-choices hidden>
+            <button type="button" data-discovery="Aprendí qué significan los sellos de un empaque.">Los sellos</button>
+            <button type="button" data-discovery="Comparé cuánta azúcar pueden tener distintas bebidas.">Azúcar en bebidas</button>
+            <button type="button" data-discovery="Descubrí que los alimentos pueden pertenecer a grupos diferentes.">Grupos de alimentos</button>
+          </div>
+
+          <div class="achievement-summary" data-achievement-summary hidden>
+            <strong><span id="share-points">0</span> puntos</strong>
+            <p id="share-achievement-copy"></p>
+          </div>
+
+          <label class="question-field" data-question-field hidden>
+            <span>Escribe una pregunta corta</span>
+            <textarea id="share-question" maxlength="120" rows="3" placeholder="¿Lo vemos juntos?"></textarea>
+            <small><span id="question-count">0</span>/120</small>
+          </label>
+
+          <div class="compose-actions">
+            <button class="button button-primary" type="button" data-build-preview disabled>Ver tarjeta</button>
+            <button class="share-back" type="button" data-close-share>Volver a Compartir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="share-preview-step" data-preview-step tabindex="-1" hidden>
+        <div class="preview-card">
+          <p id="preview-kicker">HOY DESCUBRÍ QUE…</p>
+          <blockquote id="preview-content"></blockquote>
+          <img id="share-preview-art" src="assets/tomatedesc.svg" alt="Ilustración del descubrimiento">
+        </div>
+        <div class="preview-actions">
+          <button class="share-back" type="button" data-edit-share>Volver</button>
+          <button class="button button-primary" type="button" data-finish-share>Listo</button>
+          <button class="share-back" type="button" data-close-share>Volver a Compartir</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+
+<template id="page-cual-tiene-mas" data-body-class="compare-page">
+<a class="skip-link" href="#juego">Saltar al juego</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio"><img src="assets/ITASOR.svg" alt="ITASO"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a>
+      <a class="nav-games is-active" href="index.html?page=juegos" aria-current="page">Juegos</a>
+      <a class="nav-missions" href="index.html?page=misiones">Misiones</a>
+      <a class="nav-achievements" href="index.html?page=logros">Logros</a>
+      <a class="nav-share" href="index.html?page=compartir">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main class="compare-shell" id="juego">
+    <div class="compare-topbar">
+      <p class="compare-round" id="round-label">Antes de empezar</p>
+    </div>
+
+    <section class="compare-state compare-intro" id="intro-state" aria-labelledby="intro-title" tabindex="-1">
+      <div class="intro-art-frame intro-panel">
+        <div class="intro-copy">
+          <h1 id="intro-title" tabindex="-1">¿Cuál tiene más?</h1>
+          <p>Vas a comparar bebidas y descubrir cuál tiene más azúcares añadidos.</p>
+          <p>No se trata de encontrar una bebida “buena” o “mala”. La idea es aprender a comparar cantidades.</p>
+        </div>
+        <div class="intro-reference"><span>UNA REFERENCIA PARA COMPARAR</span><div><strong>25 g</strong><b>≈ 6 cucharaditas</b></div><p>Usaremos esta cantidad como una guía durante el juego.</p><small>No es una cantidad que tengas que consumir ni completar.</small></div>
+        <button class="intro-start" id="start-game" type="button">Empezar <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section class="compare-state compare-question" id="question-state" aria-labelledby="game-question">
+      <div class="compare-heading">
+        <p class="compare-kicker">¿CUÁL TIENE MÁS?</p>
+        <h1 id="game-question" tabindex="-1">Si consumes todo este envase,<br><strong>¿cuál tiene más azúcares añadidos?</strong></h1>
+      </div>
+      <div class="choice-stage" aria-live="polite">
+        <button class="drink-choice" id="choice-left" type="button">
+          <img alt="">
+          <span class="drink-meta"><strong></strong><small></small></span>
+        </button>
+        <div class="versus-stack">
+          <b aria-hidden="true">VS</b>
+          <button class="tie-choice" id="choice-tie" type="button">Tienen lo mismo</button>
+        </div>
+        <button class="drink-choice" id="choice-right" type="button">
+          <img alt="">
+          <span class="drink-meta"><strong></strong><small></small></span>
+        </button>
+      </div>
+      <p class="choice-help">Toca una bebida o elige “Tienen lo mismo”.</p>
+    </section>
+
+    <section class="compare-state compare-result-state" id="result-state" aria-labelledby="result-title" hidden>
+      <div class="result-heading">
+        <p class="compare-kicker">MIRA LOS DATOS</p>
+        <h1 id="result-title" tabindex="-1"></h1>
+        <p id="result-message"></p>
+      </div>
+      <div class="result-layout">
+        <div class="result-products" id="result-products"></div>
+        <aside class="daily-reference" aria-label="Referencia para comparar azúcares añadidos">
+          <span>UNA REFERENCIA PARA COMPARAR</span>
+          <strong>25 g</strong>
+          <b>≈ 6 cucharaditas</b>
+          <p>Esta cantidad nos ayuda a entender mejor cuánto representa cada bebida.</p>
+          <em>No es una cantidad que tengas que consumir ni completar.</em>
+          <small>Fuente: American Heart Association</small>
+        </aside>
+      </div>
+      <button class="next-round" id="next-round" type="button">Siguiente <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="compare-state compare-finish" id="finish-state" aria-labelledby="finish-title" hidden>
+      <div class="finish-copy">
+        <p class="compare-kicker">5 COMPARACIONES</p>
+        <h1 id="finish-title" tabindex="-1">¡Ya sabes comparar!</h1>
+        <p>No necesitas memorizar las marcas. Fíjate en cuánto vas a consumir y en cuántos gramos de azúcares añadidos aporta esa cantidad.</p>
+      </div>
+      <p class="finish-note">Descubriste 5 comparaciones.</p>
+      <div class="finish-actions">
+        <button class="button button-primary" id="restart-game" type="button">Jugar otra vez</button>
+        <a class="button button-secondary" href="index.html?page=juegos">Volver a Juegos</a>
+      </div>
+    </section>
+  </main>
+
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+
+<template id="page-memorama" data-body-class="memory-page">
+<a class="skip-link" href="#tablero">Saltar al juego</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="ITASO NNA, volver al inicio"><img src="assets/ITASOR.svg" alt="ITASO"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Abrir menú</span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="index.html?page=recursos">Recursos</a><a class="nav-games is-active" href="index.html?page=juegos" aria-current="page">Juegos</a><a class="nav-missions" href="index.html?page=misiones">Misiones</a><a class="nav-achievements" href="index.html?page=logros">Logros</a><a class="nav-share" href="index.html?page=compartir">Compartir</a>
+    </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="memory-shell is-intro" id="tablero">
+    <div class="memory-topbar">
+      <div class="memory-heading"><p>MEMORAMA</p><h1 id="memory-heading-title">Antes de empezar</h1></div>
+      <div class="memory-controls"><span id="memory-pairs" aria-live="polite">0 de 15 parejas</span><button id="restart-memory" type="button">Nueva partida</button></div>
+    </div>
+    <section class="memory-intro" id="memory-intro" aria-labelledby="memory-intro-title">
+      <div class="memory-intro-copy"><h2 id="memory-intro-title">Memorama</h2><p>Encuentra las bebidas iguales y descubre qué puedes observar en sus empaques.</p><p>Cuando encuentres una pareja, conocerás una pista sobre sus sellos o avisos.</p></div>
+      <div class="memory-intro-reference"><span>UNA FORMA DE EXPLORAR</span><div><strong>RECORDAR</strong><strong>OBSERVAR</strong><strong>DESCUBRIR</strong></div><p>No necesitas memorizar todo.</p><small>La idea es aprender a reconocer algunas pistas.</small></div>
+      <button id="start-memory" type="button" aria-label="Empezar el Memorama">Empezar <span aria-hidden="true">→</span></button>
+    </section>
+    <div class="memory-board" id="memory-board" hidden aria-label="Tablero de 30 cartas, 6 columnas por 5 filas"></div>
+  </main>
+  <div class="memory-overlay" id="memory-learning" hidden role="dialog" aria-modal="true" aria-labelledby="learning-name">
+    <section class="learning-card">
+      <div class="learning-product"><img id="learning-image" alt=""><h2 id="learning-name"></h2></div>
+      <div class="learning-info">
+        <p class="learning-label">EN ESTE EMPAQUE</p><p class="finding-summary" id="finding-summary"></p>
+        <div class="finding-elements"><div class="seal-list" id="learning-seals"></div><div class="warning-list" id="learning-warnings"></div></div>
+        <div class="meaning-block"><p class="learning-label">¿QUÉ SIGNIFICA?</p><div id="learning-meaning"></div></div>
+        <div class="learning-clue"><p class="learning-label">UNA PISTA MÁS</p><p id="learning-clue"></p></div>
+        <button id="continue-memory" type="button">Seguir jugando <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+  </div>
+  <div class="memory-overlay" id="memory-finish" hidden role="dialog" aria-modal="true" aria-labelledby="finish-title">
+    <section class="finish-card"><p>15 PAREJAS</p><h2 id="finish-title">¡Encontraste todas!</h2><p>Ahora sabes que los sellos y las leyendas dan pistas diferentes sobre cada empaque.</p><div><button id="play-memory-again" type="button">Jugar otra vez</button><a href="index.html?page=juegos">Volver a Juegos</a></div></section>
+  </div>
+  <p class="notice" role="status" aria-live="polite" hidden></p>
+</template>
+<script>
+(() => {
+  const pages = {"inicio": {"styles": [], "scripts": ["script.js"], "title": "ITASO NNA — Inicio"}, "recursos": {"styles": ["recursos.css", "section-tuning.css"], "scripts": ["recursos.js"], "title": "Recursos — ITASO NNA"}, "juegos": {"styles": ["juegos.css"], "scripts": ["juegos.js"], "title": "Juegos — ITASO NNA"}, "misiones": {"styles": ["misiones.css", "section-tuning.css"], "scripts": ["misiones.js"], "title": "Misiones — ITASO NNA"}, "logros": {"styles": ["logros.css", "section-tuning.css"], "scripts": ["logros.js"], "title": "Logros — ITASO NNA"}, "compartir": {"styles": ["compartir.css", "section-tuning.css"], "scripts": ["compartir.js"], "title": "Compartir — ITASO NNA"}, "cual-tiene-mas": {"styles": ["cual-tiene-mas.css"], "scripts": ["data/drinkData.js", "cual-tiene-mas.js"], "title": "¿Cuál tiene más? — ITASO NNA"}, "memorama": {"styles": ["memorama.css"], "scripts": ["data/memoramaDrinks.js", "memorama.js"], "title": "Memorama — ITASO NNA"}};
+  const params = new URLSearchParams(location.search);
+  let route = params.get('page') || 'inicio';
+  if (!pages[route]) route = 'inicio';
+  const template = document.querySelector(`#page-${route}`);
+  const bodyClass = template.dataset.bodyClass || '';
+  const content = template.content.cloneNode(true);
+  document.body.replaceChildren(content);
+  document.body.className = bodyClass;
+  document.title = pages[route].title;
+  pages[route].styles.forEach((href) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+  });
+  const reveal = () => document.querySelector('#route-loading-style')?.remove();
+  const scripts = ['reset-on-reload.js', ...pages[route].scripts];
+  const load = (index) => {
+    if (index >= scripts.length) { reveal(); return; }
+    const script = document.createElement('script');
+    script.src = scripts[index];
+    script.onload = () => load(index + 1);
+    script.onerror = () => { console.error(`No se pudo cargar ${scripts[index]}`); reveal(); };
+    document.body.appendChild(script);
+  };
+  load(0);
+  setTimeout(reveal, 1800);
+})();
+</script>
 </body>
 </html>

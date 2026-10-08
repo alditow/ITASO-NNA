@@ -13,9 +13,9 @@ const rewardsCatalog = [
 ];
 
 const achievementsCatalog = [
-  { number: '01', name: 'Primera comparación', copy: 'Se activa cuando terminas por primera vez “¿Cuál tiene más?”.', event: 'juego-cual-tiene-mas-completo', href: 'cual-tiene-mas.html', action: 'Probar el juego', className: 'badge-compare' },
-  { number: '02', name: 'Memoria atenta', copy: 'Encuentra todas las parejas del memorama.', event: 'juego-memorama-completo', href: 'memorama.html', action: 'Ir al memorama', className: 'badge-memory' },
-  { number: '03', name: 'Explorador de etiquetas', copy: 'Visita los recursos sobre empaques y sellos.', test: (events) => Object.keys(events).some((key) => key === 'area-recursos' || key.startsWith('recurso-')), href: 'recursos.html', action: 'Explorar recursos', className: 'badge-explorer' }
+  { number: '01', name: 'Primera comparación', copy: 'Se activa cuando terminas por primera vez “¿Cuál tiene más?”.', event: 'juego-cual-tiene-mas-completo', href: 'index.html?page=cual-tiene-mas', action: 'Probar el juego', className: 'badge-compare' },
+  { number: '02', name: 'Memoria atenta', copy: 'Encuentra todas las parejas del memorama.', event: 'juego-memorama-completo', href: 'index.html?page=memorama', action: 'Ir al memorama', className: 'badge-memory' },
+  { number: '03', name: 'Explorador de etiquetas', copy: 'Visita los recursos sobre empaques y sellos.', test: (events) => Object.keys(events).some((key) => key === 'area-recursos' || key.startsWith('recurso-')), href: 'index.html?page=recursos', action: 'Explorar recursos', className: 'badge-explorer' }
 ];
 
 const characterAssets = {

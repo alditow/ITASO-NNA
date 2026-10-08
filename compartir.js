@@ -171,7 +171,7 @@ function recordPreparedShare() {
 document.querySelector('[data-finish-share]').addEventListener('click', () => {
   recordPreparedShare();
   if (activeShare?.startsWith('mission-')) {
-    window.location.href = 'misiones.html';
+    window.location.href = 'index.html?page=misiones';
     return;
   }
   closeShare();
