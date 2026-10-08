@@ -2,10 +2,10 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const modal=$('#mission-modal'),visual=$('[data-dialog-visual]'),copy=$('[data-mission-step]'),stage=$('#mission-stage'),complete=$('[data-complete-view]'),reaction=$('#mission-reaction'),progressLabel=$('#mission-progress-label'),progressBar=$('.mission-progress i'),shareLink=$('#mission-share-link');
 const pointsKey='itaso-nna-points-v1',missionsKey='itaso-nna-missions-v1';let key,lastButton,state;
 const missions={
- empaques:{title:'Detective de empaques',instruction:'Busca un producto que tengas cerca y mira el frente del empaque.',art:'../assets/naranja-detective-mision.svg',artSize:'72%',soft:'#FFE9DF',accent:'#F56A28'},
- grupos:{title:'Busca los grupos',instruction:'Mira una comida o algunos alimentos que tengas cerca.',art:'../assets/recurso2.PNG',artSize:'76%',soft:'#E4F9EA',accent:'#00A53D'},
- agua:{title:'Agua a la mano',instruction:'Busca una forma de tener agua simple cerca durante tu día.',detail:'Puede ser llenar una botella, servir un vaso o dejar una jarra en un lugar fácil de encontrar.',art:'../assets/bebidas/agua.svg',artSize:'42%',soft:'#E4F6FD',accent:'#00B3F0'},
- alrededor:{title:'Mira a tu alrededor',instruction:'Busca una forma de moverte que puedas hacer hoy.',art:'../assets/tomate-ejercicio-mision.svg',artSize:'72%',soft:'#FFE8EC',accent:'#DC2839'}
+ empaques:{title:'Detective de empaques',instruction:'Busca un producto que tengas cerca y mira el frente del empaque.',art:'assets/naranja-detective-mision.svg',artSize:'72%',soft:'#FFE9DF',accent:'#F56A28'},
+ grupos:{title:'Busca los grupos',instruction:'Mira una comida o algunos alimentos que tengas cerca.',art:'assets/recurso2.PNG',artSize:'76%',soft:'#E4F9EA',accent:'#00A53D'},
+ agua:{title:'Agua a la mano',instruction:'Busca una forma de tener agua simple cerca durante tu día.',detail:'Puede ser llenar una botella, servir un vaso o dejar una jarra en un lugar fácil de encontrar.',art:'assets/bebidas/agua.svg',artSize:'42%',soft:'#E4F6FD',accent:'#00B3F0'},
+ alrededor:{title:'Mira a tu alrededor',instruction:'Busca una forma de moverte que puedas hacer hoy.',art:'assets/tomate-ejercicio-mision.svg',artSize:'72%',soft:'#FFE8EC',accent:'#DC2839'}
 };
 const seals=['Exceso de calorías','Exceso de azúcares','Exceso de grasas saturadas','Exceso de grasas trans','Exceso de sodio','Vi otro aviso'];
 const waterActions=[['Llené una botella','una botella'],['Serví un vaso','un vaso'],['Dejé una jarra cerca','una jarra'],['Hice otra cosa','other']],waterPlaces=[['En mi cuarto','mi cuarto'],['En la cocina','la cocina'],['En mi mochila','mi mochila'],['En la mesa','la mesa'],['En otro lugar','other']],waterMoments=[['Mientras juego','mientras juego'],['Cuando estudio','cuando estudio'],['Cuando salgo','cuando salgo'],['Durante una comida','durante una comida'],['Después de moverme','después de moverme'],['En otro momento','other']];

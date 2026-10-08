@@ -33,11 +33,11 @@ let roundIndex = 0;
 let activePair = [];
 
 const characterAssets = {
-  tomate: ['../assets/tomate-1.svg', '../assets/tomate-2.svg', '../assets/tomate-3.svg'],
-  zanahoria: ['../assets/zanahoria-1.svg', '../assets/zanahoria-2.svg', '../assets/zanahoria-3.svg'],
-  naranja: ['../assets/naranja-1.svg', '../assets/naranja-2.svg', '../assets/naranja-3.svg'],
-  berenjena: ['../assets/berenjena-1.svg', '../assets/berenjena-2.svg', '../assets/berenjena-3.svg'],
-  fresa: ['../assets/fresa-1.svg', '../assets/fresa-2.svg', '../assets/fresa-3.svg']
+  tomate: ['assets/tomate-1.svg', 'assets/tomate-2.svg', 'assets/tomate-3.svg'],
+  zanahoria: ['assets/zanahoria-1.svg', 'assets/zanahoria-2.svg', 'assets/zanahoria-3.svg'],
+  naranja: ['assets/naranja-1.svg', 'assets/naranja-2.svg', 'assets/naranja-3.svg'],
+  berenjena: ['assets/berenjena-1.svg', 'assets/berenjena-2.svg', 'assets/berenjena-3.svg'],
+  fresa: ['assets/fresa-1.svg', 'assets/fresa-2.svg', 'assets/fresa-3.svg']
 };
 const faceSettings = {
   tomate: [{ top: 52, width: 32 }, { top: 51, width: 25 }, { top: 50, width: 27 }],
@@ -124,7 +124,7 @@ function renderIntroCharacter() {
   if (!characterBox || !body || !face) return;
   characterBox.dataset.fruit = 'tomate';
   characterBox.dataset.shape = 'intro';
-  body.src = '../assets/tomate-inicio.svg';
+  body.src = 'assets/tomate-inicio.svg';
   body.alt = 'Personaje de ITASO';
   face.hidden = true;
   try {
@@ -137,7 +137,7 @@ function renderIntroCharacter() {
     body.alt = character.name ? `Personaje de ${character.name}` : 'Tu personaje de ITASO';
     if (character.expression) {
       const placement = faceSettings[character.fruit][character.shape];
-      face.src = character.expression === 'recompensa' ? '../assets/recompensa-nueva-expresion.svg' : `../assets/expressions-svg/expression-${character.expression}.png`;
+      face.src = character.expression === 'recompensa' ? 'assets/recompensa-nueva-expresion.svg' : `assets/expressions-svg/expression-${character.expression}.png`;
       face.style.top = `${placement.top}%`;
       face.style.width = `${placement.width}%`;
       face.hidden = false;

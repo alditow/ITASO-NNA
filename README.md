@@ -1,17 +1,9 @@
 # ITASO NNA
 
-Sitio web para niñas, niños y adolescentes de ITASO.
+Versión final del sitio web de ITASO para niñas, niños y adolescentes.
 
-## Abrir el proyecto
+Abre `index.html` para entrar al sitio. Las páginas `recursos.html`, `juegos.html`, `misiones.html`, `logros.html` y `compartir.html` forman parte de la misma versión.
 
-Abre `index.html` en el navegador. La página principal enlaza con las secciones desarrolladas dentro de `propuesta-rediseño/`.
-
-## Estructura
-
-- `index.html`, `styles.css`, `script.js`: entrada principal del sitio.
-- `assets/`: imágenes, iconos y tipografías que utiliza la página.
+- `assets/`: imágenes, iconos y tipografías utilizados por el sitio.
 - `data/`: información utilizada por los juegos.
-- `propuesta-rediseño/`: Inicio, Recursos, Juegos, Misiones, Logros y Compartir.
-- `biblioteca-diseno/`: archivos fuente organizados por sección para edición y consulta.
-
-No se incluyeron respaldos antiguos ni archivos temporales en esta entrega.
+- `biblioteca-diseno/`: recursos fuente organizados para consulta y edición.

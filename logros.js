@@ -7,9 +7,9 @@ const pointsKey = 'itaso-nna-points-v1';
 const characterKey = 'itasoRedesignCharacterV2';
 
 const rewardsCatalog = [
-  { threshold: 40, name: 'Nueva expresión', type: 'Expresión', image: '../assets/recompensa-nueva-expresion.svg' },
-  { threshold: 140, name: 'Personaje fresa', type: 'Personaje', image: '../assets/fresa-1.svg' },
-  { threshold: 210, name: 'Movimiento sorpresa', type: 'Animación', image: '../assets/movimiento-sorpresa.svg' }
+  { threshold: 40, name: 'Nueva expresión', type: 'Expresión', image: 'assets/recompensa-nueva-expresion.svg' },
+  { threshold: 140, name: 'Personaje fresa', type: 'Personaje', image: 'assets/fresa-1.svg' },
+  { threshold: 210, name: 'Movimiento sorpresa', type: 'Animación', image: 'assets/movimiento-sorpresa.svg' }
 ];
 
 const achievementsCatalog = [
@@ -19,11 +19,11 @@ const achievementsCatalog = [
 ];
 
 const characterAssets = {
-  tomate: ['../assets/tomate-1.svg', '../assets/tomate-2.svg', '../assets/tomate-3.svg'],
-  zanahoria: ['../assets/zanahoria-1.svg', '../assets/zanahoria-2.svg', '../assets/zanahoria-3.svg'],
-  naranja: ['../assets/naranja-1.svg', '../assets/naranja-2.svg', '../assets/naranja-3.svg'],
-  berenjena: ['../assets/berenjena-1.svg', '../assets/berenjena-2.svg', '../assets/berenjena-3.svg'],
-  fresa: ['../assets/fresa-1.svg', '../assets/fresa-2.svg', '../assets/fresa-3.svg']
+  tomate: ['assets/tomate-1.svg', 'assets/tomate-2.svg', 'assets/tomate-3.svg'],
+  zanahoria: ['assets/zanahoria-1.svg', 'assets/zanahoria-2.svg', 'assets/zanahoria-3.svg'],
+  naranja: ['assets/naranja-1.svg', 'assets/naranja-2.svg', 'assets/naranja-3.svg'],
+  berenjena: ['assets/berenjena-1.svg', 'assets/berenjena-2.svg', 'assets/berenjena-3.svg'],
+  fresa: ['assets/fresa-1.svg', 'assets/fresa-2.svg', 'assets/fresa-3.svg']
 };
 const faceSettings = {
   tomate: [{ top: 52, width: 32 }, { top: 51, width: 25 }, { top: 50, width: 27 }],
@@ -86,7 +86,7 @@ function renderCharacter() {
   body.alt = character.name ? `Personaje de ${character.name}` : 'Tu personaje de ITASO';
   if (character.expression) {
     const placement = faceSettings[character.fruit][character.shape];
-    face.src = character.expression === 'recompensa' ? '../assets/recompensa-nueva-expresion.svg' : `../assets/expressions-svg/expression-${character.expression}.png`;
+    face.src = character.expression === 'recompensa' ? 'assets/recompensa-nueva-expresion.svg' : `assets/expressions-svg/expression-${character.expression}.png`;
     face.style.top = `${placement.top}%`;
     face.style.width = `${placement.width}%`;
     face.hidden = false;
@@ -96,7 +96,7 @@ function renderCharacter() {
 function rewardCard(reward, unlocked) {
   const article = document.createElement('article');
   article.className = `reward-card ${unlocked ? 'is-unlocked' : 'is-locked'}`;
-  article.innerHTML = `<img class="reward-image" src="${reward.image}" alt=""><div><span>${reward.type}</span><strong>${reward.name}</strong><small>${unlocked ? 'Desbloqueada' : `${reward.threshold} puntos para descubrirla`}</small></div><img class="reward-state-icon" src="../assets/${unlocked ? 'candabierto' : 'candcerrado'}.svg" alt="" aria-hidden="true">`;
+  article.innerHTML = `<img class="reward-image" src="${reward.image}" alt=""><div><span>${reward.type}</span><strong>${reward.name}</strong><small>${unlocked ? 'Desbloqueada' : `${reward.threshold} puntos para descubrirla`}</small></div><img class="reward-state-icon" src="assets/${unlocked ? 'candabierto' : 'candcerrado'}.svg" alt="" aria-hidden="true">`;
   return article;
 }
 
@@ -133,7 +133,7 @@ function renderRewards() {
   if (!next) {
     nextName.textContent = 'Colección completa';
     nextCopy.textContent = 'Has descubierto todas las recompensas disponibles.';
-    nextImage.src = '../assets/menu-logros.svg';
+    nextImage.src = 'assets/menu-logros.svg';
     progress.style.width = '100%';
     progressWrap.setAttribute('aria-valuemin', '0');
     progressWrap.setAttribute('aria-valuemax', String(state.total));

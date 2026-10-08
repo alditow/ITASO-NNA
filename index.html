@@ -3,105 +3,157 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ITASO NNA: conoce, juega y descubre.">
-  <title>ITASO NNA</title>
-  <link rel="stylesheet" href="styles.css">
+  <script src="reset-on-reload.js?v=20261008a"></script>
+  <meta name="description" content="Conoce ITASO: un espacio para descubrir, jugar, preguntar y compartir.">
+  <title>ITASO NNA — Propuesta de rediseño</title>
+  <link rel="stylesheet" href="styles.css?v=20261008m">
+  <link rel="stylesheet" href="ui-system.css?v=20261008d">
 </head>
 <body>
-  <header class="site-header" aria-label="Navegación principal">
-    <a class="brand" href="#inicio" aria-label="ITASO, volver al inicio"><img src="assets/ITASO.svg" alt="ITASO"></a>
-    <nav class="main-nav" aria-label="Secciones de ITASO">
-      <a class="nav-recursos" href="#recursos" data-route="recursos">Recursos</a>
-      <a class="nav-juegos" href="#juegos" data-route="juegos">Juegos</a>
-      <a class="nav-misiones" href="#misiones" data-route="misiones">Misiones</a>
-      <a class="nav-logros" href="#logros" data-route="logros">Logros</a>
-      <a class="nav-compartir" href="#compartir" data-route="compartir">Compartir</a>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="ITASO NNA, volver al inicio">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span><span class="sr-only">Abrir menú</span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de ITASO">
+      <a class="nav-resources" href="recursos.html">Recursos</a>
+      <a class="nav-games" href="juegos.html">Juegos</a>
+      <a class="nav-missions" href="misiones.html">Misiones</a>
+      <a class="nav-achievements" href="logros.html">Logros</a>
+      <a class="nav-share" href="compartir.html">Compartir</a>
     </nav>
+    <a class="caregiver-link" href="#" data-caregiver-link>Para cuidadores <span aria-hidden="true">→</span></a>
   </header>
 
-  <main>
+  <main id="contenido">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">CONOCE,<br>JUEGA Y<br>DESCUBRE<br>CON <span>ITASO</span></h1>
-        <div class="hero-intro">
-          <p>ITASO es un espacio para descubrir más sobre lo que comes, tomas y haces todos los días.</p>
-          <p>Aquí puedes aprender de forma diferente: jugando, explorando y haciendo preguntas.</p>
-        </div>
-        <a class="button button-yellow" href="#por-que">Conoce ITASO</a>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <img class="character character-tomato" src="assets/tomate-hero.svg" alt="">
-      </div>
-      <div class="down-sign" aria-hidden="true">Algo te espera más abajo</div>
-    </section>
-
-    <section class="split-section why" id="por-que" aria-labelledby="why-title">
-      <div class="section-copy red-panel">
-        <p class="section-number">01</p>
-        <div class="copy-inner">
-          <h2 id="why-title">¿POR QUÉ<br>ESTAMOS<br>AQUÍ?</h2>
-          <p>Cada día tomamos pequeñas decisiones sobre lo que comemos, tomamos, hacemos y compartimos.</p>
-          <p>ITASO quiere ayudarte a entender mejor esas decisiones, sin decirte que existe una sola forma correcta de hacer las cosas.</p>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">ITASO NNA</p>
+        <h1 id="hero-title"><span>Ideas claras</span><span>para tu día</span><span>a día.</span></h1>
+        <p class="hero-lead">Explora cosas que forman parte de tu día y aprende a entenderlas mejor.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#por-que">Conócenos <span aria-hidden="true">→</span></a>
+          <a class="button button-ghost" href="recursos.html">Ir directo a explorar</a>
         </div>
       </div>
-      <div class="character-panel yellow-panel" aria-hidden="true"><img class="character character-carrot" src="assets/zanahoria-story.svg" alt=""></div>
-    </section>
 
-    <section class="participate" aria-labelledby="participate-title">
-      <p class="section-number">02</p>
-      <div class="participate-art" aria-hidden="true">
-        <span class="questions">¿?</span>
-        <img class="character character-orange" src="assets/naranja-story.svg" alt="">
-      </div>
-      <div class="participate-copy">
-        <h2 id="participate-title">CONOCER<br>MÁS TAMBIÉN<br>TE AYUDA A<br>PARTICIPAR</h2>
-        <p>Entender mejor lo que haces todos los días puede ayudarte a hacer preguntas, compartir ideas y participar junto con las personas que te cuidan.</p>
-        <aside>Participar significa tener voz y aprender en compañía. Las decisiones familiares se construyen con las personas adultas que te cuidan.</aside>
-      </div>
-    </section>
-
-    <section class="principles" aria-labelledby="principles-title">
-      <p class="section-number">03</p>
-      <h2 id="principles-title">AQUÍ HACEMOS<br>LAS COSAS ASÍ</h2>
-      <div class="principle-grid">
-        <article class="principle principle-red">
-          <img src="assets/sandia.png" alt="Rebanada de sandía">
-          <div><h3>SIN<br>JUZGAR</h3><p>Sin culpas ni comparaciones.<br>Aquí puedes aprender a tu manera.</p></div>
-        </article>
-        <article class="principle principle-orange">
-          <img src="assets/naranja.png" alt="Naranja">
-          <div><h3>CON<br>INFORMACIÓN<br>CLARA</h3><p>Explicamos las cosas sin hacerlas más complicadas de lo necesario.</p></div>
-        </article>
-        <article class="principle principle-green">
-          <img src="assets/pera.png" alt="Pera">
-          <div><h3>PENSANDO EN<br>LA VIDA REAL</h3><p>No todas las personas viven, comen o hacen las mismas cosas.</p></div>
-        </article>
-        <article class="principle principle-blue">
-          <img src="assets/pescado.png" alt="Pescado">
-          <div><h3>APRENDIENDO<br>JUNTOS</h3><p>Puedes descubrir algo nuevo y compartirlo con quien te cuida.</p></div>
-        </article>
+      <div class="hero-visual reveal">
+        <div class="speech-bubble" id="hero-character-message"><img class="hero-message-art" src="assets/texto-1.svg" alt="Aquí puedes crear un personaje a tu manera"></div>
+        <div class="hero-orbit" aria-hidden="true">
+          <span class="orbit-dot dot-one"></span>
+          <span class="orbit-dot dot-two"></span>
+          <span class="orbit-line"></span>
+        </div>
+        <button class="hero-character-trigger" type="button" data-open-customizer aria-describedby="hero-character-message" aria-label="Personalizar mi personaje">
+          <span class="hero-avatar" data-hero-avatar>
+            <img class="hero-avatar-body" src="assets/tomate-inicio.svg?v=20261003f" alt="Cabeza de tomate, personaje de ITASO listo para personalizar">
+            <img class="hero-avatar-face" src="" alt="" hidden>
+          </span>
+          <span class="character-action">Personalizar <span aria-hidden="true">↗</span></span>
+        </button>
       </div>
     </section>
 
-    <section class="discover" aria-labelledby="discover-title">
-      <p class="section-number">04</p>
-      <h2 id="discover-title">DESCUBRE,<br>PARTICIPA Y<br>COMPARTE</h2>
-      <p>En ITASO también tienes un espacio para aprender a tu manera. Puedes jugar, descubrir cosas nuevas y compartir lo que aprendas con las personas que te cuidan. No tienes que saberlo todo ni tomar todas las decisiones; la idea es que participes, preguntes y conozcas mejor lo que pasa en tu día a día.</p>
+    <div class="hero-divider" aria-hidden="true">
+      <img src="assets/pleca.svg" alt="">
+    </div>
+
+    <section class="why section-shell" id="por-que" aria-labelledby="why-title">
+      <div class="why-copy reveal">
+        <p class="eyebrow eyebrow-orange">QUIÉNES SOMOS</p>
+        <h2 id="why-title">Te ayudamos a entender mejor</h2>
+        <div class="daily-formula" aria-label="Comemos más tomamos más nos movemos es igual a parte de todos nuestros días">
+          <div class="formula-actions">
+            <span>Comemos</span><b aria-hidden="true">+</b><span>Tomamos</span><b aria-hidden="true">+</b><span>Nos movemos</span>
+          </div>
+          <div class="formula-result"><b aria-hidden="true">=</b><strong>Parte de todos nuestros días</strong></div>
+        </div>
+        <p class="formula-note">Conocer más sobre lo que hacemos también nos ayuda a entenderlo mejor.</p>
+      </div>
+      <div class="why-visual reveal">
+        <button class="why-character-trigger" type="button" aria-expanded="false" aria-controls="why-character-bubble">
+          <img class="why-character" src="assets/berenjena-pensativa.svg" alt="Berenjena pensativa, personaje de ITASO">
+          <span class="sr-only">Mostrar mensaje de la berenjena</span>
+        </button>
+        <div class="why-character-bubble" id="why-character-bubble" hidden><img src="assets/texto-3.svg" alt="Aprende a conocer mejor lo que comes, tomas y haces cada día"></div>
+      </div>
     </section>
 
-    <section class="start" id="empieza" aria-labelledby="start-title">
-      <h2 id="start-title">EMPIEZA<br>A TU MANERA</h2>
-      <p>Crea tu personaje, juega, explora y descubre cosas nuevas a tu manera.</p>
-      <button class="button button-red" id="open-customizer" type="button">Crear mi personaje</button>
-      <button class="skip-character" id="enter-without-character" type="button">Explorar primero</button>
-      <small>Crear tu personaje es completamente opcional.</small>
+    <section class="how" id="como-funciona" aria-labelledby="how-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow eyebrow-blue">ELIGE</p>
+        <h2 id="how-title">Descubre cómo funciona</h2>
+      </div>
+      <div class="path-list">
+        <article class="path-card reveal">
+          <img class="path-card-art" src="assets/recursostarjeta.svg" alt="Recursos: información para descubrir">
+          <a class="path-card-cta cta-discover" href="recursos.html"><span>Explorar</span><b aria-hidden="true">→</b></a>
+        </article>
+        <article class="path-card reveal">
+          <img class="path-card-art" src="assets/juegatarjeta.svg" alt="Juegos: aprende mientras comparas y recuerdas">
+          <a class="path-card-cta cta-play" href="juegos.html"><span>Jugar</span><b aria-hidden="true">→</b></a>
+        </article>
+        <article class="path-card reveal">
+          <img class="path-card-art" src="assets/compartetarjeta.svg" alt="Compartir: cuéntalo y pregunta">
+          <a class="path-card-cta cta-share" href="compartir.html"><span>Compartir</span><b aria-hidden="true">→</b></a>
+        </article>
+      </div>
     </section>
+
+    <section class="principles section-shell" id="principios" aria-labelledby="principles-title">
+      <div class="principles-intro reveal">
+        <p class="eyebrow eyebrow-green">EN ITASO</p>
+        <h2 id="principles-title">Así lo hacemos</h2>
+        <img class="principles-character" src="assets/tomate-saltando.svg" alt="Tomate saltando, personaje de ITASO">
+      </div>
+      <div class="principles-graphic reveal">
+        <article class="principle-card principle-red" tabindex="0">
+          <span class="principle-number" aria-hidden="true">01</span>
+          <div><h3>Cada quien es diferente</h3><p>Aquí no hay una sola forma de hacer las cosas.</p></div>
+        </article>
+        <article class="principle-card principle-blue" tabindex="0">
+          <span class="principle-number" aria-hidden="true">02</span>
+          <div><h3>Fácil de entender</h3><p>Te explicamos las cosas de forma clara y sencilla.</p></div>
+        </article>
+        <article class="principle-card principle-green" tabindex="0">
+          <span class="principle-number" aria-hidden="true">03</span>
+          <div><h3>Pasa todos los días</h3><p>Hablamos de cosas que ves y haces en tu día.</p></div>
+        </article>
+        <article class="principle-card principle-orange" tabindex="0">
+          <span class="principle-number" aria-hidden="true">04</span>
+          <div><h3>Aprendemos juntos</h3><p>Pregunta, descubre y comparte lo que aprendes.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="participate" id="participa" aria-labelledby="participate-title">
+      <div class="participate-copy reveal">
+        <p class="eyebrow">COMPARTE</p>
+        <h2 id="participate-title">Lo que descubres también cuenta</h2>
+        <p>Cada descubrimiento puede convertirse en una pregunta, una idea o una conversación.</p>
+      </div>
+      <div class="participate-visual reveal" aria-label="Personajes que comparten lo que aprenden">
+        <img class="companions" src="assets/compas.svg" alt="Una zanahoria y una naranja conversando">
+        <button class="companion-hotspot companion-left" type="button" data-companion-message="companion-message-one" aria-expanded="false"><span class="sr-only">Ver qué puede hacer el NNA</span></button>
+        <button class="companion-hotspot companion-right" type="button" data-companion-message="companion-message-two" aria-expanded="false"><span class="sr-only">Ver cómo acompaña quien cuida</span></button>
+        <img class="companion-message companion-message-one" id="companion-message-one" src="assets/texto-compa-1.svg" alt="Tú juegas, exploras y preguntas" hidden>
+        <img class="companion-message companion-message-two" id="companion-message-two" src="assets/texto-compa-2.svg" alt="Quien te cuida te acompaña y decide contigo" hidden>
+      </div>
+    </section>
+
   </main>
 
-  <section class="customizer" id="personalizador" hidden aria-labelledby="customizer-title">
+  <section class="customizer" id="personalizador" hidden aria-labelledby="customizer-title" aria-modal="true" role="dialog">
     <header class="customizer-header">
-      <button class="logo-back" id="close-customizer" type="button" aria-label="Volver al menú"><img src="assets/ITASO.svg" alt="ITASO"></button>
+      <img src="assets/ITASOR.svg" alt="ITASO">
+      <p>Editor de personaje</p>
+      <button class="customizer-close modal-close" type="button" data-close-customizer aria-label="Cerrar editor"><img src="assets/boton-x.svg" alt=""></button>
     </header>
+
     <div class="customizer-layout">
       <div class="avatar-stage" id="avatar-stage">
         <div class="avatar is-empty" id="avatar">
@@ -109,248 +161,83 @@
           <img class="avatar-face" src="" alt="">
           <p class="avatar-prompt">Elige un personaje<br>para comenzar</p>
         </div>
+        <p class="stage-caption">Así se ve tu personaje</p>
       </div>
+
       <div class="customizer-controls">
-        <p class="eyebrow">Hazlo a tu manera</p>
-        <h2 id="customizer-title">CREA TU<br>PERSONAJE</h2>
+        <div class="customizer-intro">
+          <p class="eyebrow eyebrow-orange">HAZLO A TU MANERA</p>
+          <h2 id="customizer-title">Crea tu personaje</h2>
+          <p>Elige una opción de cada grupo. Puedes cambiarla cuando quieras.</p>
+        </div>
+
         <div class="identity-fields">
-          <label>Tu nombre<input id="character-name" type="text" maxlength="18" placeholder="Escribe tu nombre" autocomplete="off"></label>
-          <fieldset><legend>Tu edad</legend><div class="age-options"><label><input type="radio" name="age" value="8-12"><span>8–12 años</span></label><label><input type="radio" name="age" value="13-17"><span>13–17 años</span></label></div></fieldset>
+          <label>Tu nombre
+            <input id="character-name" type="text" maxlength="18" placeholder="Escribe tu nombre" autocomplete="off">
+          </label>
         </div>
-        <fieldset><legend>Elige tu personaje</legend><div class="fruit-options">
-          <button class="option fruit-option" type="button" data-fruit="tomate"><img src="assets/tomate-1.svg" alt="Tomate"></button>
-          <button class="option fruit-option" type="button" data-fruit="zanahoria"><img src="assets/zanahoria-1.svg" alt="Zanahoria"></button>
-          <button class="option fruit-option" type="button" data-fruit="naranja"><img src="assets/naranja-1.svg" alt="Naranja"></button>
-          <button class="option fruit-option" type="button" data-fruit="berenjena"><img src="assets/berenjena-1.svg" alt="Berenjena"></button>
-        </div></fieldset>
-        <fieldset><legend>Elige una forma</legend><div class="shape-options">
-          <button class="option shape-option" type="button" data-shape="0" disabled><img src="" alt="Forma 1"></button>
-          <button class="option shape-option" type="button" data-shape="1" disabled><img src="" alt="Forma 2"></button>
-          <button class="option shape-option" type="button" data-shape="2" disabled><img src="" alt="Forma 3"></button>
-        </div></fieldset>
-        <fieldset><legend>Elige una expresión</legend><div class="expression-options" id="expression-options"></div></fieldset>
-        <fieldset><legend>Elige el fondo</legend><div class="color-options">
-          <button type="button" class="color-option" data-color="#ffd20a" style="--swatch:#ffd20a" aria-label="Amarillo"></button>
-          <button type="button" class="color-option" data-color="#18b5dd" style="--swatch:#18b5dd" aria-label="Azul"></button>
-          <button type="button" class="color-option" data-color="#22ad39" style="--swatch:#22ad39" aria-label="Verde"></button>
-          <button type="button" class="color-option" data-color="#ff8a00" style="--swatch:#ff8a00" aria-label="Naranja"></button>
-          <button type="button" class="color-option" data-color="#ef263b" style="--swatch:#ef263b" aria-label="Rojo"></button>
-        </div></fieldset>
-        <button class="button button-red finish-character" type="button">Así me gusta</button>
-      </div>
-    </div>
-  </section>
 
-  <section class="experience-screen nna-menu" id="menu-nna" hidden aria-labelledby="menu-title">
-    <header class="experience-header">
-      <button class="experience-logo intro-return" type="button" aria-label="Volver a la introducción"><img src="assets/ITASO.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <button class="edit-character" type="button">Editar personaje</button>
-    </header>
-    <button class="menu-overlay-close" type="button" hidden aria-label="Cerrar menú">×</button>
-    <div class="menu-canvas">
-      <div class="menu-heading">
-        <h2 id="menu-title">¿QUÉ QUIERES<br>HACER<span class="menu-comma"></span><span class="menu-name"></span>?</h2>
-        <p>Elige por dónde empezar. Puedes descubrir, jugar o probar algo nuevo.</p>
-      </div>
-      <div class="menu-character" hidden aria-label="Tu personaje"><img class="menu-character-body" alt=""><img class="menu-character-face" alt=""></div>
-      <article class="path path-resources">
-        <img src="assets/menu-recursos.svg" alt="" aria-hidden="true">
-        <p>Conozco</p><h3>RECURSOS</h3>
-        <span>Descubre información que te puede servir todos los días.</span>
-        <button class="button path-button" data-route="recursos" type="button">Explorar</button>
-      </article>
-      <article class="path path-games">
-        <img src="assets/menu-juegos.svg" alt="" aria-hidden="true">
-        <p>Aprendo jugando</p><h3>JUEGOS</h3>
-        <span>Aprende mientras juegas, buscas, recuerdas y descubres.</span>
-        <button class="button path-button" data-route="juegos" type="button">Jugar</button>
-      </article>
-      <article class="path path-missions">
-        <img src="assets/menu-misiones.svg" alt="" aria-hidden="true">
-        <p>Lo llevo a mi realidad</p><h3>MISIONES</h3>
-        <span>Prueba pequeñas cosas fuera de la pantalla.</span>
-        <button class="button path-button" data-route="misiones" type="button">Ver misiones</button>
-      </article>
-      <article class="path path-achievements"><img src="assets/menu-logros.svg" alt="" aria-hidden="true"><h3>LOGROS</h3><span>Revisa lo que has descubierto dentro de ITASO.</span><button type="button" data-route="logros">Ver logros</button></article>
-      <article class="path path-share"><img src="assets/menu-compartir.svg" alt="" aria-hidden="true"><h3>COMPARTIR</h3><span>Enseña un descubrimiento a quien te cuida.</span><button type="button" data-route="compartir">Compartir</button></article>
-    </div>
-  </section>
-
-  <section class="experience-screen resources-screen" id="recursos" hidden aria-labelledby="resources-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASO.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button class="is-current" data-route="recursos">Recursos</button><button data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <button class="menu-return" data-route="menu-nna" type="button">Volver al inicio NNA</button>
-    </header>
-    <div class="area-intro resources-intro"><p>Conozco</p><h2 id="resources-title">RECURSOS</h2><span>Descubre información que te puede servir todos los días.</span></div>
-    <div class="resource-layout">
-      <article class="resource-feature resource-seals"><h3>SELLOS DE<br>ADVERTENCIA</h3><p>Descubre qué información muestran al frente de algunos empaques.</p><button type="button">Toca para descubrir</button></article>
-      <article class="resource-sugar"><h3>¿CUÁNTA AZÚCAR TIENE?</h3><p>Compara bebidas y observa lo que dice su etiqueta.</p><button type="button">Comparar</button></article>
-      <article class="resource-plate"><h3>PLATO DEL BIEN COMER</h3><p>Conoce los grupos de alimentos y cómo pueden convivir en un plato.</p><button type="button">Explorar</button></article>
-      <article class="resource-small resource-portion"><h3>MOVIMIENTO Y DESCANSO</h3><p>Explora cómo cambian tus días.</p><button type="button">Ver más</button></article>
-      <article class="resource-small resource-drinks"><h3>¿QUÉ HAY EN UN EMPAQUE?</h3><p>Encuentra las pistas que aparecen en sus distintas partes.</p><button type="button">Explorar</button></article>
-      <article class="resource-pack"><h3>ACTIVIDADES FÍSICAS</h3><p>Descubre distintas formas de moverte en la vida cotidiana.</p><button type="button">Explorar</button></article>
-    </div>
-  </section>
-
-  <section class="experience-screen games-screen" id="juegos" hidden aria-labelledby="games-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASO.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button class="is-current" data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <button class="menu-return" data-route="menu-nna" type="button">Volver al inicio NNA</button>
-    </header>
-    <div class="area-intro games-intro"><p>Aprendo jugando</p><h2 id="games-title">JUEGOS</h2><span>Aprende mientras juegas, buscas, recuerdas y descubres.</span></div>
-    <div class="games-layout">
-      <article class="game game-missing"><span class="game-number">01</span><img src="assets/cual-tiene-mas/sprite.svg" alt=""><h3>¿CUÁL TIENE MÁS?</h3><p>Compara dos etiquetas y descubre qué cuentan.</p><button type="button" data-route="cual-tiene-mas">Jugar</button></article>
-      <article class="game game-memory"><span class="game-number">02</span><h3>MEMORAMA</h3><p>Encuentra las parejas.</p><button type="button" data-route="memorama">Jugar</button></article>
-      <article class="game game-puzzle"><span class="game-number">03</span><div class="puzzle-mark">▦</div><h3>PUZZLE</h3><p>Mueve las piezas hasta completar la imagen.</p><button type="button">Jugar</button></article>
-      <article class="game game-changed"><span class="game-number">04</span><img src="assets/pera.png" alt=""><h3>¿QUÉ CAMBIÓ?</h3><p>Mira con atención y encuentra la diferencia.</p><button type="button">Jugar</button></article>
-      <article class="game game-glass"><span class="game-number">05</span><div class="glass-mark">?</div><h3>VASO MISTERIOSO</h3><p>Descubre las pistas escondidas.</p><button type="button">Jugar</button></article>
-      <article class="game game-clue"><span class="game-number">06</span><h3>ATRAPA LA PISTA</h3><p>Pon a prueba tus reflejos.</p><button type="button">Jugar</button></article>
-    </div>
-  </section>
-
-  <section class="experience-screen missions-screen" id="misiones" hidden aria-labelledby="missions-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASO.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button data-route="juegos">Juegos</button><button class="is-current" data-route="misiones">Misiones</button></nav>
-      <button class="menu-return" data-route="menu-nna" type="button">Volver al inicio NNA</button>
-    </header>
-    <div class="area-intro missions-intro"><p>Lo llevo a mi realidad</p><h2 id="missions-title">MISIONES</h2><span>Prueba pequeñas cosas fuera de la pantalla.</span></div>
-    <div class="missions-layout">
-      <article><b>01</b><h3>DETECTIVE DE EMPAQUES</h3><p>Encuentra un producto en casa y descubre qué información tiene.</p><button type="button">Probar misión</button></article>
-      <article><b>02</b><h3>BUSCA LOS GRUPOS</h3><p>Observa una comida e identifica alimentos de distintos grupos.</p><button type="button">Observar</button></article>
-      <article><b>03</b><h3>EXPLORADOR DE BEBIDAS</h3><p>Descubre qué bebidas hay en casa y qué puedes observar en sus empaques.</p><button type="button">Explorar</button></article>
-      <article><b>04</b><h3>COMPARTE UN DESCUBRIMIENTO</h3><p>Cuéntale a tu cuidador algo nuevo que hayas aprendido en ITASO.</p><button type="button">Compartir</button></article>
-      <article><b>05</b><h3>MISIÓN DEL AGUA</h3><p>Observa en qué momentos del día tomas agua.</p><button type="button">Descubrir</button></article>
-      <article><b>06</b><h3>AYUDA A PREPARAR</h3><p>Participa con tu cuidador y descubre qué ingredientes utilizan.</p><button type="button">Probar misión</button></article>
-    </div>
-    <aside class="caregiver-note"><strong>Tú exploras y participas.</strong><span>Las personas que te cuidan te acompañan, comparan y deciden contigo.</span></aside>
-  </section>
-
-  <section class="experience-screen simple-area-screen" id="logros" hidden aria-labelledby="achievements-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASO.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <button class="menu-return" data-route="menu-nna" type="button">Volver al inicio NNA</button>
-    </header>
-    <div class="achievements-page">
-      <div class="achievements-hero"><div><p>Lo que voy descubriendo</p><h2 id="achievements-title">LOGROS</h2><span>Cada logro recuerda algo que exploraste. Tus puntos reconocen la participación y el aprendizaje, sin competir con otras personas.</span></div></div>
-      <div class="achievement-grid">
-        <article class="achievement-feature"><span>01</span><h3>PRIMERA<br>COMPARACIÓN</h3><p>Se activa cuando terminas por primera vez “¿Cuál tiene más?”.</p><button type="button" data-route="cual-tiene-mas">Probar el juego</button></article>
-        <article class="achievement-memory"><span>02</span><h3>MEMORIA ATENTA</h3><p>Encuentra todas las parejas del memorama.</p><button type="button" data-route="memorama">Ir al memorama</button></article>
-        <article class="achievement-explorer"><span>03</span><h3>EXPLORADOR DE ETIQUETAS</h3><p>Visita los recursos sobre empaques y sellos.</p><button type="button" data-route="recursos">Explorar recursos</button></article>
-        <aside><strong>TUS AVANCES APARECERÁN AQUÍ</strong><p>Los logros muestran recorridos completados; no califican lo que comes ni tus decisiones.</p></aside>
-      </div>
-      <section class="rewards" aria-labelledby="rewards-title">
-        <div class="rewards-heading"><p>Participar también abre nuevas posibilidades</p><h2 id="rewards-title">RECOMPENSAS</h2><span>Los puntos reconocen lo que exploras, juegas y compartes. Nunca califican decisiones de alimentación.</span></div>
-        <div class="points-panel"><span>PUNTOS ACTUALES</span><strong id="points-total">0</strong><small>puntos</small></div>
-        <div class="next-reward"><div><span>PRÓXIMA RECOMPENSA</span><strong id="next-reward-name">Nueva expresión</strong><p id="next-reward-copy">40 puntos más para desbloquearla</p></div><img id="next-reward-image" src="assets/expressions-svg/expression-4.png" alt="Vista previa de la recompensa"><div class="reward-progress"><i id="reward-progress-bar"></i></div></div>
-        <div class="reward-groups">
-          <section><h3>RECOMPENSAS DESBLOQUEADAS</h3><div class="reward-list" id="unlocked-rewards"></div></section>
-          <section><h3>RECOMPENSAS POR DESCUBRIR</h3><div class="reward-list" id="locked-rewards"></div></section>
-        </div>
-      </section>
-    </div>
-  </section>
-
-  <section class="experience-screen simple-area-screen" id="compartir" hidden aria-labelledby="share-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASO.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <button class="menu-return" data-route="menu-nna" type="button">Volver al inicio NNA</button>
-    </header>
-    <div class="share-page">
-      <div class="share-hero"><div><p>Lo comparto con quien me cuida</p><h2 id="share-title">COMPARTIR</h2><span>Elige una idea para iniciar una conversación. Tú exploras y las personas que te cuidan te acompañan.</span></div></div>
-      <div class="share-composer">
-        <div class="share-prompts" aria-label="Ideas para compartir">
-          <button type="button"><b>UNA COMPARACIÓN</b><span>“Encontré dos bebidas con cantidades parecidas.”</span></button>
-          <button type="button"><b>UN SELLO</b><span>“Descubrí qué indica esta advertencia.”</span></button>
-          <button type="button"><b>UNA PREGUNTA</b><span>“¿Revisamos juntos esta etiqueta?”</span></button>
-        </div>
-        <article class="share-preview"><p>PARA CONVERSAR</p><blockquote id="share-preview-text">Elige una idea de la izquierda para preparar tu mensaje.</blockquote><button type="button" data-pending="Compartir descubrimiento">Preparar para compartir</button><small>Nada se publica automáticamente.</small></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="experience-screen compare-game-screen" id="cual-tiene-mas" hidden aria-labelledby="compare-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASOR.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button class="is-current" data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <a class="game-return-link" href="propuesta-rediseño/juegos.html">Volver a Juegos</a>
-    </header>
-    <div class="compare-heading">
-      <div><h2 id="compare-title">¿CUÁL TIENE MÁS?</h2></div>
-      <p>Elige el producto que tiene más azúcares por cada 100 ml.</p>
-    </div>
-    <div class="compare-progress"><span id="compare-progress-text">Aciertos: 0 de 7</span><div id="compare-progress-track"></div></div>
-    <div class="compare-arena" id="compare-arena" aria-live="polite">
-      <button class="compare-product" id="compare-left" type="button"><img alt=""><strong></strong><span>Elegir</span></button>
-      <div class="compare-versus" aria-hidden="true"></div>
-      <button class="compare-product" id="compare-right" type="button"><img alt=""><strong></strong><span>Elegir</span></button>
-    </div>
-    <section class="compare-result" id="compare-result" hidden>
-      <div class="compare-values"><article><strong id="compare-left-value"></strong><span>por 100 ml</span></article><article><strong id="compare-right-value"></strong><span>por 100 ml</span></article></div>
-      <div class="compare-message"><div><h3 id="compare-result-title"></h3><p id="compare-result-copy"></p></div></div>
-      <button class="button button-red" id="compare-next" type="button">Siguiente comparación</button>
-    </section>
-    <section class="compare-finish" id="compare-finish" hidden>
-      <div><h2>¡TERMINASTE!</h2><p>No necesitas memorizar cada cifra. Lo importante es revisar que la base sea la misma para poder comparar.</p><button class="button button-red" id="compare-restart" type="button">Jugar otra vez</button><button class="compare-back" data-route="juegos" type="button">Volver a Juegos</button></div>
-    </section>
-  </section>
-
-  <section class="experience-screen memory-screen" id="memorama" hidden aria-labelledby="memory-title">
-    <header class="experience-header">
-      <button class="experience-logo" data-route="menu-nna" type="button" aria-label="Volver al inicio NNA"><img src="assets/ITASOR.svg" alt="ITASO"></button>
-      <nav aria-label="Menú NNA"><button data-route="recursos">Recursos</button><button class="is-current" data-route="juegos">Juegos</button><button data-route="misiones">Misiones</button></nav>
-      <a class="game-return-link" href="propuesta-rediseño/juegos.html">Volver a Juegos</a>
-    </header>
-    <div class="memory-heading">
-      <div><p>Memorama</p><h2 id="memory-title">ENCUENTRA<br>LA PAREJA</h2></div>
-      <p>Encuentra los productos iguales y descubre qué te cuenta su empaque.</p>
-    </div>
-    <div class="memory-status" aria-live="polite"><span id="memory-pairs">0 de 6 parejas</span><button id="restart-memory" type="button">Nueva partida</button></div>
-    <div class="memory-board" id="memory-board" aria-label="Tablero del memorama"></div>
-
-    <div class="memory-overlay" id="memory-learning" hidden role="dialog" aria-modal="true" aria-labelledby="learning-product-name">
-      <div class="memory-dialog">
-        <div class="memory-product"><img id="learning-product-image" alt=""><h3 id="learning-product-name"></h3><div class="seal-list" id="learning-seals"></div></div>
-        <div class="sugar-discovery">
-          <p class="sugar-kicker" id="learning-sugar-kicker">Azúcares añadidos</p>
-          <strong id="learning-sugar-value"></strong>
-          <span id="learning-sugar-qualifier"></span>
-          <b id="learning-sugar-basis"></b>
-          <div class="teaspoon-visual" id="learning-teaspoons" aria-label="Aproximación en cucharaditas"></div>
-          <p class="teaspoon-label" id="learning-teaspoons-label"></p>
-          <div class="product-comparison" id="learning-comparison">
-            <span>Comparación</span>
-            <strong id="comparison-product-name"></strong>
-            <b id="comparison-product-value"></b>
-            <small id="comparison-note"></small>
+        <fieldset class="choice-group">
+          <legend><span>01</span> Elige tu personaje</legend>
+          <div class="fruit-options option-grid option-grid-fruit">
+            <button class="option fruit-option" type="button" data-fruit="tomate" aria-label="Tomate"><img src="assets/tomate-1.svg" alt=""></button>
+            <button class="option fruit-option" type="button" data-fruit="zanahoria" aria-label="Zanahoria"><img src="assets/zanahoria-1.svg" alt=""></button>
+            <button class="option fruit-option" type="button" data-fruit="naranja" aria-label="Naranja"><img src="assets/naranja-1.svg" alt=""></button>
+            <button class="option fruit-option" type="button" data-fruit="berenjena" aria-label="Berenjena"><img src="assets/berenjena-1.svg" alt=""></button>
+            <button class="option fruit-option reward-fruit" type="button" data-fruit="fresa" data-unlock-threshold="140" aria-label="Fresa, se desbloquea con 140 puntos" disabled><img src="assets/fresa-1.svg" alt=""></button>
           </div>
-        </div>
-        <div class="learning-character-row">
-          <div class="memory-guide-character" aria-label="Tu personaje"><img class="memory-guide-body" alt=""><img class="memory-guide-face" alt=""></div>
-          <div class="speech-bubble"><p id="learning-message"></p><button id="continue-memory" type="button">Seguir jugando</button></div>
-        </div>
-      </div>
-    </div>
+        </fieldset>
 
-    <div class="memory-overlay" id="memory-finish" hidden role="dialog" aria-modal="true" aria-labelledby="memory-finish-title">
-      <div class="memory-finish-card">
-        <div class="memory-celebration-character" aria-label="Tu personaje celebrando"><img class="memory-celebration-body" alt=""><img class="memory-celebration-face" alt=""></div>
-        <h2 id="memory-finish-title">¡ENCONTRASTE TODAS<br>LAS PAREJAS!</h2>
-        <p>Ahora sabes que los sellos son una primera pista, pero comparar la información de los productos puede ayudarte a entender mejor qué contienen.</p>
-        <p class="final-character-line">“No tienes que memorizar los números. Lo importante es aprender a comparar.”</p>
-        <div><button id="play-memory-again" type="button">Jugar otra vez</button><button data-route="juegos" type="button">Volver a Juegos</button></div>
+        <fieldset class="choice-group">
+          <legend><span>02</span> Elige una forma</legend>
+          <div class="shape-options option-grid option-grid-shape">
+            <button class="option shape-option" type="button" data-shape="0" disabled aria-label="Forma 1"><img src="" alt=""></button>
+            <button class="option shape-option" type="button" data-shape="1" disabled aria-label="Forma 2"><img src="" alt=""></button>
+            <button class="option shape-option" type="button" data-shape="2" disabled aria-label="Forma 3"><img src="" alt=""></button>
+          </div>
+        </fieldset>
+
+        <fieldset class="choice-group">
+          <legend><span>03</span> Elige una expresión</legend>
+          <div class="expression-options option-grid option-grid-expression" id="expression-options"></div>
+        </fieldset>
+
+        <fieldset class="choice-group">
+          <legend><span>04</span> Elige el fondo</legend>
+          <div class="color-options">
+            <button type="button" class="color-option" data-color="#ffd21f" style="--swatch:#ffd21f" aria-label="Amarillo"></button>
+            <button type="button" class="color-option" data-color="#3db5e6" style="--swatch:#3db5e6" aria-label="Azul"></button>
+            <button type="button" class="color-option" data-color="#2eaf47" style="--swatch:#2eaf47" aria-label="Verde"></button>
+            <button type="button" class="color-option" data-color="#f56a28" style="--swatch:#f56a28" aria-label="Naranja"></button>
+            <button type="button" class="color-option" data-color="#dc2839" style="--swatch:#dc2839" aria-label="Rojo"></button>
+          </div>
+        </fieldset>
+
+        <div class="customizer-actions">
+          <button class="button button-dark finish-character" type="button">Así me gusta <span aria-hidden="true">→</span></button>
+          <button class="cancel-character" type="button" data-close-customizer>Seguir sin cambios</button>
+        </div>
       </div>
     </div>
   </section>
-  <div class="floating-character" hidden aria-label="Tu personaje. Arrástralo para cambiarlo de lugar"><img class="floating-character-body" alt=""><img class="floating-character-face" alt=""></div>
-  <div class="route-notice" role="status" aria-live="polite"></div>
-  <script src="data/memorama-products.js"></script>
-  <script src="data/cual-tiene-mas-products.js"></script>
-  <script src="script.js"></script>
+
+  <footer class="site-footer site-footer-home">
+    <a class="footer-brand" href="#inicio" aria-label="Volver al inicio de ITASO NNA">
+      <img src="assets/ITASOR.svg" alt="ITASO">
+    </a>
+    <nav class="footer-links" aria-label="Información del sitio">
+      <button type="button">Privacidad</button>
+      <button type="button">Términos</button>
+      <a href="mailto:contacto@itaso.mx">Contacto</a>
+    </nav>
+  </footer>
+
+  <div class="notice" role="status" aria-live="polite" hidden>
+    El acceso al sitio de cuidadores se conectará aquí.
+  </div>
+
+  <script src="script.js?v=20261005f"></script>
+  <script src="figma-mobile-capture.js"></script>
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 </body>
 </html>

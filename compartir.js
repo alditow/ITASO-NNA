@@ -26,9 +26,9 @@ let selectedDiscovery = '';
 let lastShareButton = null;
 
 const shareModes = {
-  discovery: { kicker: 'UN DESCUBRIMIENTO', title: '¿Qué encontraste?', description: 'Elige una idea para preparar una tarjeta.', art: '../assets/tomatedesc.svg', artAlt: 'Tomate que representa un descubrimiento' },
-  achievements: { kicker: 'MIS LOGROS', title: 'Muestra tu recorrido', description: 'Usaremos tus puntos y recompensas actuales.', art: '../assets/logros-compartir.svg', artAlt: 'Trofeo que representa los logros' },
-  question: { kicker: 'UNA PREGUNTA', title: '¿Qué quieres preguntar?', description: 'Escribe una pregunta corta para platicarla en persona.', art: '../assets/berenjena-pensativa-compartir.svg', artAlt: 'Berenjena pensando una pregunta' }
+  discovery: { kicker: 'UN DESCUBRIMIENTO', title: '¿Qué encontraste?', description: 'Elige una idea para preparar una tarjeta.', art: 'assets/tomatedesc.svg', artAlt: 'Tomate que representa un descubrimiento' },
+  achievements: { kicker: 'MIS LOGROS', title: 'Muestra tu recorrido', description: 'Usaremos tus puntos y recompensas actuales.', art: 'assets/logros-compartir.svg', artAlt: 'Trofeo que representa los logros' },
+  question: { kicker: 'UNA PREGUNTA', title: '¿Qué quieres preguntar?', description: 'Escribe una pregunta corta para platicarla en persona.', art: 'assets/berenjena-pensativa-compartir.svg', artAlt: 'Berenjena pensando una pregunta' }
 };
 
 function setShareArt(data) {
