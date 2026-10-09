@@ -54,7 +54,7 @@ const resourceContent = {
     source: officialSources.labels
   },
   bebidas: {
-    accent: 'yellow',
+    accent: 'green',
     kicker: 'HIDRATACIÓN',
     title: '¿QUÉ HAY EN LO QUE TOMAS?',
     description: 'La información del envase ayuda a observar y comparar lo que contienen distintas bebidas.',
@@ -74,7 +74,7 @@ const resourceContent = {
     source: officialSources.guides
   },
   grupos: {
-    accent: 'green',
+    accent: 'blue',
     kicker: 'VARIEDAD',
     title: 'NO TODOS LOS ALIMENTOS APORTAN LO MISMO',
     description: 'Los alimentos pueden agruparse porque comparten algunas características. Cada grupo aporta cosas distintas.',
@@ -94,7 +94,7 @@ const resourceContent = {
     source: officialSources.guides
   },
   empaque: {
-    accent: 'blue',
+    accent: 'yellow',
     kicker: 'ETIQUETADO',
     title: 'UN EMPAQUE CUENTA MÁS DE LO QUE PARECE',
     description: 'Puedes aprender dónde buscar información sin tener que interpretar todavía todos los números de la etiqueta.',
