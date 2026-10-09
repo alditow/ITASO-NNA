@@ -223,12 +223,17 @@ body.resource-modal-open{overflow:hidden}
   --card-circle:#BBE8C8;
   background:var(--green-soft)
 }
-.resource-card.content-card.resource-groups,
-.resource-card.content-card.resource-package{
+.resource-card.content-card.resource-groups{
   --card-main:var(--blue);
   --card-soft:var(--blue-soft);
   --card-circle:#C4EEFF;
   background:var(--blue-soft)
+}
+.resource-card.content-card.resource-package{
+  --card-main:var(--yellow);
+  --card-soft:var(--yellow-soft);
+  --card-circle:#FFEAA3;
+  background:var(--yellow-soft)
 }
 .resource-card.content-card.resource-feature{grid-template-rows:46% 54%}
 .resource-card.content-card.resource-groups,
